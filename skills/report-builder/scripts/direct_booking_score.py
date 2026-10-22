@@ -77,7 +77,7 @@ def main():
     if sys.argv[1:] == ["selftest"]:
         return selftest()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--home', required=True, help='Home base address, used only to build the "directions from home" link')
+    ap.add_argument('--home', required=True, help='Home base (an area, station or landmark, never a street address), used only to build the "directions from home" link')
     ap.add_argument('--max-drive', type=int, required=True, help='Longest drive from home, in minutes (the trip\'s own cap from config.json)'); ap.add_argument('--budget', type=int, required=True, help='Total budget for the stay, in the listing currency'); ap.add_argument('--min-bedrooms', type=int, required=True, help='Fewest bedrooms (from config.json)')
     a = ap.parse_args()
     origin = urllib.parse.quote(a.home)

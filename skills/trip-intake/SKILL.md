@@ -1,6 +1,6 @@
 ---
 name: trip-intake
-description: The first step of any travel-agent run. Asks one free-form question, then multiple-choice follow-ups only for gaps, and ends in a fit profile the user confirms: the weighted criteria that decide what ranks higher for this group and trip. Writes trip_intake.json, which the gate and every later skill read. Use at the start of a run and again if the trip's nature changes.
+description: "ALWAYS FIRST for any trip: list back what the user already stated, ask only the gaps, confirm the shape (stay, itinerary, mixed) and the fit profile. Writes trip_intake.json."
 user-invocable: true
 ---
 

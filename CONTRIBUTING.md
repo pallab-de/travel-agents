@@ -29,7 +29,7 @@ For live checks you need a Google Maps key. Keep it in an encrypted store. For d
   `Path(__file__).resolve().parents[3] / 'tools'`).
 - Read project data through `Path.cwd()`. Scripts are run from the trip folder, and they write there.
 - Do not hardcode a city, party size, date, budget or brand in shared code. Put it in a flag, a config field or a
-  clearly marked per-trip block that refuses to run until it is filled in (see `merge.py`).
+  config field, and refuse to run without it (see `merge.py`'s `--config` and `--booking-url`).
 - Before adding an HTTP or API client, check `tools/google_maps.py` and `tools/travel_secrets.py` first.
 
 ## Adding a skill or agent

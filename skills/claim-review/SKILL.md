@@ -1,6 +1,6 @@
 ---
 name: claim-review
-description: The shared method for reviewing any deliverable by falsification rather than approval - a claim ledger the reviewer must fill in, a fallacy catalogue, a coverage check on the ledger, calibration of the reviewer on frozen seeded fixtures before its verdict is trusted, an independent cold reader, and fixing findings as classes. Runs as a panel of specialist LLM reviewers (facts, judgement, plan, cold reader) whose ledgers the review gate computes the verdict from. Used by every agent before an output is called finished.
+description: "The review method for any deliverable: falsification by calibrated fresh reviewers (facts, judgement, plan, cold reader) over a claim ledger. Use before anything is called finished."
 user-invocable: true
 ---
 

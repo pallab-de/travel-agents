@@ -1,6 +1,6 @@
 ---
 name: requirements-intake
-description: The stay extension to trip-intake. For a rental or hotel search it settles the hard filters and constraints trip_intake.json doesn't hold (drive-time cap, the real-bed rule, bedrooms, pool, pets, whether unavailable listings are dropped or kept and flagged, deliverable, paid-provider spend), asking only the gaps and writing a validated config.json. Use at the start of a staycation-finder run after trip-intake (or on its own, which opens with the same free-form question), and again whenever a requirement turns out to be undefined partway through.
+description: "Stay trips only: settle the hard filters (drive cap, real beds, bedrooms, pool, pets, unavailable listings) beyond trip_intake.json. Use right after trip-intake, before any listing search."
 user-invocable: true
 ---
 

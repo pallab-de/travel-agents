@@ -11,13 +11,16 @@ import re
 import sys
 from pathlib import Path
 
-try:
-    from cryptography.fernet import Fernet, InvalidToken
-except ImportError as e:
-    raise ImportError(
-        "This skill needs the 'cryptography' package: pip install cryptography (or `pip install -r requirements.txt` "
-        "from the plugin root, which includes it)."
-    ) from e
+def _crypto():
+    """(Fernet, InvalidToken), imported on first use so that an environment variable (cloud, CI) and setup_check.py work without the package."""
+    try:
+        from cryptography.fernet import Fernet, InvalidToken
+    except ImportError as e:
+        raise ImportError(
+            "This skill needs the 'cryptography' package: pip install cryptography (or `pip install -r requirements.txt` "
+            "from the plugin root, which includes it)."
+        ) from e
+    return Fernet, InvalidToken
 
 
 def secrets_dir() -> Path:
@@ -66,7 +69,7 @@ def recommended_dir() -> Path:
 
 
 def generate_key() -> bytes:
-    return Fernet.generate_key()
+    return _crypto()[0].generate_key()
 
 
 def _restrict_permissions(path: Path) -> None:
@@ -123,13 +126,14 @@ def load_key(key_path: Path) -> bytes:
 def encrypt_file(src_path: Path, dest_path: Path, key: bytes) -> None:
     """Encrypt src_path (plaintext .env) into dest_path (a Fernet token)."""
     plaintext = src_path.read_bytes()
-    token = Fernet(key).encrypt(plaintext)
+    token = _crypto()[0](key).encrypt(plaintext)
     write_private(dest_path, token)
 
 
 def decrypt_bytes(blob: bytes, key: bytes) -> bytes:
     """Decrypt a Fernet token. Raises ValueError on a wrong or corrupt key/data."""
     try:
+        Fernet, InvalidToken = _crypto()
         return Fernet(key).decrypt(blob)
     except InvalidToken as exc:
         raise ValueError("Decryption failed: wrong key, or the .env.enc file is corrupt.") from exc
@@ -167,7 +171,7 @@ def selftest() -> int:
     key = generate_key()
     cases = [('quotes and inline comments are not part of a value', parse_env_bytes(b'K="v"\nJ=w # c\nL=\'x y\'\nM=a#b') == {'K': 'v', 'J': 'w', 'L': 'x y', 'M': 'a#b'}),
              ('a blank value stays blank', parse_env_bytes(b'K=\n') == {'K': ''}),
-             ('a round trip returns what went in', decrypt_bytes(Fernet(key).encrypt(b'A=1'), key) == b'A=1')]
+             ('a round trip returns what went in', decrypt_bytes(_crypto()[0](key).encrypt(b'A=1'), key) == b'A=1')]
     try:
         decrypt_bytes(b'not a token', key)
         cases.append(('a corrupt store raises', False))

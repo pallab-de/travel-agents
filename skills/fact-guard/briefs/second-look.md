@@ -22,8 +22,8 @@ If you read one, say so in your reply and stop: the second look is then not inde
    (member, flexible, non-refundable). Read only; do not click anything that books, pays or changes a basket or account.
 3. Save the visible text around the value to a file and capture it:
    `pipeline.py capture PROJECT ROW URL "VALUE" --raw-file F`. The capture is refused if the value's digits (or, for a feature, its words) are not in the file.
-   For a **photo** row, fetch the image URL itself, save a short note of what it returned as the raw file, and add `--http-status <the status it answered>`
-   (200 for an image that loaded): a photo capture without a 200 is not a second look.
+   For a **photo** or a **link** row, fetch the URL itself, save a short note of what it returned as the raw file, and add `--http-status <the status it answered>`
+   (200 for an image that loaded, any 2xx for a link): a photo or link capture without that status is not a second look.
 4. If the page cannot be read (blocked, gone, a different product), do not guess or reuse a neighbouring figure: write the row
    and the reason in your reply. A missing second look is reported; a made-up one is not allowed.
 

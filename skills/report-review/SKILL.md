@@ -1,6 +1,6 @@
 ---
 name: report-review
-description: Reviews a built stay report by falsification, not approval. Runs the deterministic audits first (flag-vs-field consistency, abstained-match audit, staleness), then the claim-review panel, then a scripted design sweep (overflow, contrast, tap targets, focus, images, links) across widths and themes. Use after report-builder, as the last stage before calling a report finished.
+description: "After a report is built: deterministic audits, then the claim-review panel, then a scripted design sweep (overflow, contrast, tap targets). Use before calling a report finished."
 user-invocable: true
 ---
 

@@ -78,6 +78,8 @@ Get a key at [console.cloud.google.com](https://console.cloud.google.com/) → A
 Create API key, then enable **Places API**, **Distance Matrix API** and **Geocoding API** on it (APIs &
 Services → Library).
 
+**Known limit:** this plugin calls Google's legacy endpoints (Places API (Legacy), Distance Matrix API (Legacy), Geocoding). Google moved the first two to Legacy status on 1 March 2025 and does not offer them to Cloud projects created after that (see https://developers.google.com/maps/legacy). Projects that already had them enabled keep working. If your project cannot enable them, calls fail with `REQUEST_DENIED`; use an older project, and see the migration goal to Places API (New) and the Routes API.
+
 Keys are never stored as plaintext and never read or printed by Claude — only loaded in-memory, by name, from
 an encrypted store you control:
 
@@ -166,15 +168,15 @@ collapsing all three into one description would blur the signal Claude uses to p
   Distance Matrix client, with a shared status check), `serpapi.py` (Google Flights and Maps reviews through
   SerpApi), `place_distance.py` (distances from any origins to named places), `travel_secrets.py` (the one
   credential loader — reads the encrypted store, never prints a key), `coverage_check.py` (the field-coverage
-  checker behind `fetch-integrity`), `intake_checks.py` (the street-address and placeholder checks both intake validators share).
+  checker behind `fetch-integrity`), `intake_checks.py` (the street-address and placeholder checks both intake validators share), plus the number and text helpers `numfmt.py`, `textnorm.py` and `jsonfile.py`, and the development tools `run_selftests.py`, `check_agents.py` and `privacy_scan.py` (see SECURITY.md).
 - **`environment-setup`** — venv, secrets and Playwright setup, identical across every agent.
 - **`review-synthesis`** and **`claim-review`** — the judgement and review principles every agent uses. The
   full corpus-plus-judge pipeline suits `staycation-finder`'s many-property comparisons; `venue-verification`
   states the same rules at a weight that fits a single lookup.
 
-Deliberately *not* shared across every agent: `requirements-intake` (the stay search's hard filters) and `trip-constraints-intake`
-(the itinerary's fixed constraints). Both build on `trip-intake`, the first pass every agent runs: one free-form
-question, then multiple-choice follow-ups, so neither re-asks what it already holds.
+`requirements-intake` (the stay search's hard filters; every agent uses it when stays are searched) and `trip-constraints-intake`
+(the itinerary's fixed constraints; `travel-agent` and `vacation-planner` only) both build on `trip-intake`, the first pass every agent runs:
+it lists back what the user already said, then asks only the gaps, so neither re-asks what it already holds.
 
 </details>
 
@@ -218,7 +220,7 @@ travel-agents/
   agents/                travel-agent.md, staycation-finder.md, vacation-planner.md
   skills/<name>/         SKILL.md plus that skill's own scripts/ (and template/ or templates/)
   skills/claim-review/calibration/   frozen synthetic fixtures for the review calibration
-  tools/                 shared code: google_maps.py, serpapi.py, place_distance.py, travel_secrets.py, coverage_check.py, intake_checks.py
+  tools/                 shared code (Maps and SerpApi clients, secrets loader, coverage and intake checks, number and text helpers) and dev tools: run_selftests.py, check_agents.py, privacy_scan.py
   requirements.txt
   LICENSE, README.md, CONTRIBUTING.md, SECURITY.md
 ```
@@ -260,8 +262,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full pre-pull-request checklist.
 ## Known limitations
 
 - **Browser search needs the Playwright MCP server.** The agents are granted it, but it must be registered with Claude
-  Code (`environment-setup` walks through it); without it, search falls back to HTTP fetches, which cannot give live
-  prices.
+  Code (`environment-setup` walks through it); without it, a hotel search falls back to Booking.com landmark pages (indicative prices
+  only) and a rental search cannot run.
 - **`flight-research` uses SerpApi's Google Flights and `flightclaw`** (set up step by step by `environment-setup`) and an upstream
   library that has broken before when Google Flights changed its page. A live search result is never a
   confirmed bookable price — always verify before you book.

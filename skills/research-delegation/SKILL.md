@@ -1,6 +1,6 @@
 ---
 name: research-delegation
-description: Fans a broad per-city or per-topic research sweep (meals, sights, hotels) out to parallel background subagents, then audits their output before it reaches the trip document (repetition, standing-convention violations, thin sourcing, reasoning errors). Use for vacation-planner's wide sweeps; pairs with venue-verification for the fact-checking each subagent does.
+description: "Fan a broad per-city or per-topic sweep (meals, sights, hotels) out to parallel subagents and audit their output. Use for an itinerary's wide sweeps."
 user-invocable: true
 ---
 

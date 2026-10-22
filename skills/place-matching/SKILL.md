@@ -1,6 +1,6 @@
 ---
 name: place-matching
-description: Matches a rental listing (name plus approximate coordinates) to its real Google Maps place with no manual per-listing overrides. Use for every candidate from listing-search before scoring, and re-validate on any new city before trusting a match.
+description: "Match rental listings to their Google Maps place with no manual overrides. Use for every rental candidate before scoring. Not for hotels (hotel-dossier matches those)."
 user-invocable: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: venue-verification
-description: Verifies one named venue or transit leg (existence, business status, hours, rating, distance) with a tool before any claim about it is written into a trip document, and weighs its reviews in proportion. Use for vacation-planner's fact-by-fact research; use place-matching instead to fuzzy-match many scraped candidates in bulk.
+description: "Verify one venue, transit leg or single property rating before writing a claim about it: existence, status, hours, rating (platform score, count, spread, second source), distance. Also answers 'is this rating trustworthy?'."
 user-invocable: true
 ---
 

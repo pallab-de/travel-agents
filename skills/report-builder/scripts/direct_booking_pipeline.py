@@ -13,7 +13,7 @@ A new site needs its own scrape into this shape and its own SITE_BASE; the match
 
 Run (from the project folder that holds mb_cards.json/mb_detail2_raw.json):
   python "<plugin root>/skills/report-builder/scripts/direct_booking_pipeline.py" \
-      --home "<home base address>, <city>" \
+      --home "<area, station or landmark>, <city>" \
       --out-departure <YYYY-MM-DDTHH:MM> --back-departure <YYYY-MM-DDTHH:MM> --tz <UTC offset, e.g. +01:00> \
       --budget <total budget, optional> --max-drive <minutes> [--require-amenity pool]
 """

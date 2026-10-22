@@ -8,7 +8,7 @@ Only durations/km are stored. The API key never leaves this process (see travel_
 
 Run (from the project folder that holds <in>.json and where <out>.json should be written):
   python "<plugin root>/skills/listing-search/scripts/drive_times.py" <in>.json <out>.json \\
-      --home "<home base address>, <city>" \\
+      --home "<area, station or landmark>, <city>" \\
       --out-departure <YYYY-MM-DDTHH:MM> --back-departure <YYYY-MM-DDTHH:MM> --tz <UTC offset, e.g. +01:00>
 """
 import argparse, json, re, sys

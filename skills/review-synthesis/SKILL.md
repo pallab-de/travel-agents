@@ -1,6 +1,6 @@
 ---
 name: review-synthesis
-description: Gets review text from at least two independent sources, then runs parallel synthesis agents and an independent check to produce the themes and concerns (each citing review ids) that fact-guard's guest score and overindexing rule are built on. Use after place-matching and before report-builder to read many properties against each other; for one venue mid-research use venue-verification.
+description: "Themes and concerns from reviews of many properties, from two independent sources, each citing review ids. Use after place-matching (rentals) or hotel-dossier (hotels). For one property's rating use venue-verification."
 user-invocable: true
 ---
 
