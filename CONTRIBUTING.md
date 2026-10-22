@@ -68,6 +68,8 @@ cached by version, so an unbumped change will not reach users.
 - Do not commit generated HTML reports, caches (`__pycache__/`, `*.json` from a live run), `secrets/`, or
   screenshots from a real trip.
 - Keep the diff minimal. Do not reformat files you are not changing.
+- `main` is protected: no direct pushes and no force pushes. Work on a branch, push it, open a pull request, and squash-merge it (history stays linear and the
+  branch is deleted on merge). Run `python tools/privacy_scan.py --install-hooks` once so a commit or push that carries a key or a personal detail is refused locally.
 
 ## Reporting problems
 
