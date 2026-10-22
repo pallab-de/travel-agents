@@ -30,6 +30,10 @@ pull request:
 - Plaintext `.env` files must not be committed. `encrypt_env.py` deletes the plaintext after it verifies the
   encrypted copy.
 - Check before you commit: `git status` should not list `secrets/`, `.env`, `*.key` or `*.enc` files.
+- Run `python tools/privacy_scan.py --install-hooks` once. It installs a pre-commit and a pre-push check that fail if a commit or
+  the history carries the real value of any key in your encrypted stores, a key-shaped string (Google, OpenAI-style, GitHub, Apify,
+  AWS, Slack), a private-key block, an e-mail address, an absolute user path, or any private term you list (your e-mail, phone,
+  home address, full name) in `.git/privacy-terms.txt`, a file inside `.git` that is never pushed. It never prints a value.
 
 ## Scope
 
