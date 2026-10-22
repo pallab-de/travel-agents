@@ -1,6 +1,6 @@
 ---
 name: fetch-integrity
-description: A coverage or sanity check run immediately after every fetch of an external page or API response whose structure this plugin does not control, so a silent drift (a changed page schema, a blocked or empty page) fails loudly instead of producing plausible wrong data. Load it from listing-search, research-delegation or venue-verification, not on its own.
+description: "Run after every fetch of a page or API response you do not control, whoever fetched it (listing-search, research-delegation, venue-verification or you). Fails loudly on a blocked, empty or changed page."
 user-invocable: true
 ---
 

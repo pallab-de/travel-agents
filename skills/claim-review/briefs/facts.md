@@ -20,7 +20,7 @@ Nothing from the builder about what changed or why.
 
 ## Coverage the gate checks
 
-Every card, day, leg and booking gets at least one claim. The gate also picks a sample from the output's own hash —
+Every card, day, leg and booking gets at least one claim; so does every table block (`row_id` `table:<block id>`), cost option (`option:<label>`), research note (`note:<topic>`) and decision (`decision:<title>`). The gate also picks a sample from the output's own hash —
 you are not told which items — and each sampled item needs at least 3 claims. So cover everything in depth; skimming
 the tail fails.
 

@@ -1,6 +1,6 @@
 ---
 name: fit-scoring
-description: Ranks places for a specific group and trip, not for a generic traveller. A dedicated fit-scorer sub-agent reads each place's captured facts against the fit profile the user agreed in trip-intake, and proposes overlays on the baseline guest score (+ for a quality the trip wants, - for a drawback), each pointing at the fact behind it. apply_overlays.py writes them into the spec, recomputes and re-ranks; fact-guard checks the structure; the judgement reviewer challenges the reasoning. Use after the dossiers and guest scores exist and before the review panel, for any ranked stay or venue list.
+description: "Rank places for THIS group: a fit-scorer sub-agent proposes sourced overlays on the guest score from captured facts. Use after the spec is built and before the gate."
 user-invocable: true
 ---
 

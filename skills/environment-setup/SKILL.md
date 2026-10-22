@@ -1,6 +1,6 @@
 ---
 name: environment-setup
-description: One-time (and re-checked-per-project) setup shared by every agent in this plugin — a Python venv with this plugin's dependencies, an encrypted secrets store for API keys, and the Playwright MCP server for browser-based search. Use before the first API call or the first browser-based search in a new project folder, and whenever a later stage fails with a missing key, package or MCP tool.
+description: "Use before the first script or API call in a project: Python venv, API-key store (asks where it lives; encrypted), Playwright MCP. Run credential_status.py first; it never shows a key value."
 user-invocable: true
 ---
 
@@ -127,6 +127,7 @@ reach this section lazily if a user invokes them directly without going through 
    - **`GOOGLE_MAPS_API_KEY`** — unlocks almost everything (place matching, drive/walk/transit times, landmark
      distances). Free tier covers a normal trip's usage. `console.cloud.google.com` → APIs & Services →
      Credentials → Create API key, then enable Places API, Distance Matrix API and Geocoding API on it.
+     **Known limit:** this plugin calls Google's legacy endpoints (Places API (Legacy), Distance Matrix API (Legacy), Geocoding). Google moved the first two to Legacy status on 1 March 2025 and does not offer them to Cloud projects created after that (see https://developers.google.com/maps/legacy). Projects that already had them enabled keep working. If your project cannot enable them, calls fail with `REQUEST_DENIED`; use an older project, and see the migration goal to Places API (New) and the Routes API.
    - **`APIFY_TOKEN`** (optional) — a licensed review provider, for a guest score built from more than the
      reviews the Places API returns per place (5 per call, about 10 with google_reviews10.py; fact-guard needs at least 20 rated reviews read to score a place). Paid per call — only set this up if the user has
      confirmed they want deeper review coverage for this trip (`requirements-intake`/`trip-constraints-intake`

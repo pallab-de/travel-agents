@@ -1,6 +1,6 @@
 ---
 name: approach-planning
-description: Write down the research approach — which sources, which search variants per source, what yield would indicate real coverage, when to stop — BEFORE fetching starts, then mechanically check what actually happened against that plan. Catches an under-covered search (one source quietly skipped, a sweep that silently found nothing) before it's mistaken for a complete one. Shared by every agent: staycation-finder's listing-search and vacation-planner's research-delegation each write their own plan the same way.
+description: "Before any multi-source search, write plan.json (sources, search variants, expected yield), then check what actually ran against it. Catches a source that was silently skipped."
 user-invocable: true
 ---
 

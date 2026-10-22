@@ -1,6 +1,6 @@
 ---
 name: transport-options
-description: Compares air, road and rail for one leg (origin, destination, dates, group) door to door and recommends one with stated reasons, never a guessed time or fare. Road from Google Maps at the trip's departure time, air from SerpApi's Google Flights (confirmed against the airline or flightclaw), rail from the operator's page, transfers as segments. Use when travel-agent or vacation-planner needs a mode decision for one leg; for a within-city distance use tools/place_distance.py.
+description: "Compare air, road and rail for one leg door to door from captured times and fares, and recommend one. Use for any leg between places, or when asked how to get there."
 user-invocable: true
 ---
 

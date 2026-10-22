@@ -29,7 +29,7 @@ img/
 /review/
 /evidence/
 /*.html
-_assets/
+*_assets/
 hero.*
 /RESEARCH.md
 

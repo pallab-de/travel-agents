@@ -1,6 +1,6 @@
 ---
 name: trip-constraints-intake
-description: The itinerary extension to trip-intake. For a multi-place trip it settles the fixed constraints that anchor the research (route order and why, what the group can actually handle, a stay-accessible rule, transit-mode order, budget shape, meal-coverage standard, loyalty resources), asking only what trip_intake.json doesn't already hold. Free-form first, multiple choice for the gaps, free text for lists with quantities. Use once at the start of an itinerary or mixed trip, after trip-intake, and again if a fixed constraint changes.
+description: "Itineraries only: settle route order, what the group can handle, transit modes, budget shape and meal coverage beyond trip_intake.json. Use right after trip-intake."
 user-invocable: true
 ---
 

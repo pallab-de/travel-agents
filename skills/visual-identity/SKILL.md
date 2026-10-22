@@ -1,6 +1,6 @@
 ---
 name: visual-identity
-description: Give a report or itinerary a real, distinctive look sourced from the actual destination - a properly licensed photo and a colour palette pulled from it - instead of every trip reusing the same colours. Produces the `design` object (brand, ethos, light and dark palettes, fonts) and the hero photo the report-builder spec requires. Use once per project, early, before the content gets heavy.
+description: "Give a report a distinctive look from the real destination: a licensed hero photo, a palette taken from it, fonts. Produces the design object the build requires."
 user-invocable: true
 ---
 
@@ -28,7 +28,7 @@ API key is needed.
 - **Keep the `.attribution.json` sidecar it writes.** Put the credit in the hero's `image_credit` (a stay: `hero_image_credit` in `stay_report.json`), e.g. `<title> by
   <creator> (<licence>), via Openverse`. `by` and `by-sa` require it; `cc0` and `pdm` don't, but it costs one line.
 - Name the file in the hero block (`"image": "hero.jpg"`, beside the spec; a stay: `hero_image` and `hero_image_alt` in `stay_report.json`, because the stay spec is generated). The build resizes it, writes it into the
-  page's `_assets` folder with a manifest, and the audit re-hashes it, so a photo swapped after the build is caught.
+  report's `<report name>_assets/` folder with a manifest, and the audit re-hashes it, so a photo swapped after the build is caught.
 
 ## 2. Pull an anchor palette from it
 

@@ -1,6 +1,6 @@
 ---
 name: fact-guard
-description: Fail-closed verification gate for any report or itinerary spec. Extracts every checkable claim (price, score, count, distance, time, booking, availability, photo, link) into a ledger, checks each source fits its kind of claim and is fresh, needs two independent sources for critical facts, recomputes the rank score, checks the plan for inconsistencies, stores every capture offline with its raw evidence, spot-checks a deterministic sample with a fresh second look, and blocks the build until everything passes. Use before any report is published or shared.
+description: "Fail-closed gate for a report spec: every figure needs a fresh captured source, critical ones two, then a second look. Use to capture, gate and build (pipeline.py)."
 user-invocable: true
 ---
 
@@ -14,8 +14,7 @@ The pipeline is driven by `scripts/pipeline.py` (`python -B "<plugin root>/skill
 --help`; `<plugin root>` is the folder the plugin is installed or cloned into): `init`, `capture`, `exclude`, `status`,
 `review`, `sample`, `spot`, `gate`, `build`, `check`. This skill describes what those commands enforce and the files
 they write. You can run the parts directly. A bundled fictional example (three invented inns on reserved `.test`
-domains, no real hotel or price) is in `examples/`: copy it to start a project, and `pipeline.py selftest` runs it
-offline. Reserved example hosts (`.test`, `.example`, `.invalid`) can be added to a fixed class only in a spec whose footer says it is synthetic.
+domains, no real hotel or price) is in `examples/`: a reference that `pipeline.py selftest` runs offline. Start a real project with `pipeline.py init` or `stay_spec.py build`, not by copying it. Reserved example hosts (`.test`, `.example`, `.invalid`) can be added to a fixed class only in a spec whose footer says it is synthetic.
 
 **Project folder.** One folder holds a job: `brief.json` (the question, audience, decision, criteria, what is out of
 scope, the assumptions), `spec.json`, `captures/`, `review.json`, `spot.plan.json`, `spot.json`, `RESEARCH.md` (the

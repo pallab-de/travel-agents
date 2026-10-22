@@ -1,10 +1,6 @@
 ---
 name: community-intel
-description: Find out what people who actually went there say - not the premade-itinerary consensus. Digs
-  through Reddit, TripAdvisor forums, Lonely Planet's Thorntree, and Google Maps reviews for genuine local/
-  visitor opinion (what's overhyped, what's skippable, what a "must-see" list leaves out), then stores the
-  findings in a searchable, sourced form so later sessions can check and build on them instead of re-Googling.
-  Use for any real should-we-go-here / is-this-worth-it call, not just a venue's opening hours.
+description: "Find what people who actually went there say (forums, Reddit, blogs), not the premade-itinerary consensus. Use for should-we-go and hidden-gem calls in an itinerary."
 user-invocable: true
 ---
 

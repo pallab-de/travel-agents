@@ -1,6 +1,6 @@
 ---
 name: flight-research
-description: Researches flight fares and miles/points redemptions for a route (an entry or exit airport, or an internal leg): real captured fares from SerpApi's Google Flights (`transport-options`' `compare_modes.py air`) and a second source (flightclaw or the airline's own site), never a remembered price. Use whenever a trip document needs a specific flight price, a "cheapest option" claim, a round-trip total, or a cash-versus-points comparison. For "should we fly, drive or take the train", use `transport-options`, which calls this skill for the air leg.
+description: "Flight fares and points redemptions for a route from captured sources (SerpApi Google Flights, flightclaw, the airline site). Use for any flight price; never quote one from memory."
 user-invocable: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: listing-search
-description: Collects every viable rental or hotel candidate on the target platform (search, map-grid sweep, no-amenity-filter sweep), parses detail pages, gets traffic-aware drive times, and finds leads beyond the platform (direct-booking sites, brand villas, articles). Use after requirements-intake and environment-setup, before place-matching.
+description: "Collect every rental or hotel candidate (search, grid sweep, no-filter sweep), parse details, drive times, beyond-platform leads. Use after requirements-intake and environment-setup."
 user-invocable: true
 ---
 
@@ -54,7 +54,7 @@ the discipline is the same: a sweep, a second independent source, visible exclus
    Booking.com's results page: it gives live prices for the dates and rooms. If it is not, use step 2 and say in the
    report that prices are indicative.
 2. **Booking.com landmark pages, no browser needed.** `https://www.booking.com/landmark/<cc>/<slug>.en-gb.html` (find
-   slugs with `site:booking.com/landmark/in/ <city> <landmark>`) is server-rendered with the property data in
+   slugs with `site:booking.com/landmark/<cc>/ <city> <landmark>`) is server-rendered with the property data in
    `"accommodations":[...]` arrays. `scripts/extract_booking_landmark.py <urls...> --out raw_booking.json` writes one set of candidates deduplicated by
    property id; pass several landmarks across the area as the equivalent of a grid sweep. **Read its docstring before
    using a price:** the embedded "price from" is a cached 1-night, 2-adult rate that does not move with dates or

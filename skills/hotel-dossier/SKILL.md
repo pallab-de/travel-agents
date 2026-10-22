@@ -1,6 +1,6 @@
 ---
 name: hotel-dossier
-description: Builds the full per-hotel dossier behind a hotel shortlist - Google place match, Google rating and reviews, TripAdvisor rating and reviews, rail distance measured by Google Maps, photos, and booking facts with their sources - so each hotel's details panel is complete or says why a section could not be collected. Use after listing or rate capture and before a hotel report is built.
+description: "Per-hotel dossier for a hotel shortlist: Google match, ratings and reviews, rail distance, photos, booking facts. Use on the hotel path, after listing-search."
 user-invocable: true
 ---
 
@@ -12,7 +12,7 @@ This skill says what each section must contain and which script produces it.
 
 ## The contract (what the gate checks)
 
-Required sections (`policy.required_sections`; these are the defaults, and a spec may name its own):
+Required sections (`policy.required_sections`; a spec may add sections, never drop these):
 
 | Section title | Must contain | Produced by |
 |---|---|---|
@@ -77,13 +77,12 @@ Each file records its method and retrieval time, and each review its text hash. 
 
 ## What this skill does not do
 
-- It does not write the spec. The spec is the report's content and is written with fact-guard's pipeline
-  (`skills/fact-guard`).
-- It does not judge which hotel is best. Ranking is the report author's decision, made from the figures.
+- It does not write the spec: `report-builder`'s `stay_spec.py` generates it from the files this skill produces.
+- It does not rank hotels: `fit-scoring` and fact-guard's `rank-score-v2` do, from captured facts.
 - It does not measure landmark distances itself. Use `tools/place_distance.py`, the generic Maps distance tool that rail also rests on: any origins, any named places, walking or driving, with the same city guard. A named destination must come back under (nearly) that name: a different place Google offers for an obscure name is reported `not_found` with the closest result named, unless the destination sets `accept_first`; give `name` when the query is longer than the place's name.
 
 ## Validation
 
-- `google_places.py` and `rail_distance.py` need a key, so they are not run in CI. Their matching and
-  disagreement rules are covered by the fact-guard gate's rail rule and the selftests.
+- `google_places.py` and `rail_distance.py` need a key for their live calls; their offline selftests run in `tools/run_selftests.py`. Their matching and
+  disagreement rules are also covered by the fact-guard gate's rail rule.
 - The completeness rule is tested by `guard.py selftest`: a card with a missing section must fail.

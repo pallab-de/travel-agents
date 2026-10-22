@@ -1,6 +1,6 @@
 ---
 name: report-builder
-description: Builds every report and itinerary from one generic block engine: a JSON spec rendered into one designed, self-contained HTML page (hero, notice, ranked cards with details, an explorer table, chart, day plans, transport legs, booking ledger, method). The build refuses a spec without a design or one fact-guard's gate rejects. stay_spec.py turns a stay search's ranked rows into a spec. Use after review-synthesis (and fit-scoring for a ranked list), before the review panel.
+description: "Build every report from one JSON spec into one designed HTML page plus its photo folder; refuses a spec without a design or a passing gate. Use to write and build stay and itinerary specs."
 user-invocable: true
 ---
 
