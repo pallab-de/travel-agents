@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin.json",
   "name": "travel-agents",
   "displayName": "Travel Agents",
-  "version": "0.26.1",
+  "version": "0.27.0",
   "description": "Agents for cited, checked research. travel-agent is the single entry point for a trip (stay, itinerary, or both) that gathers its own requirements and ranks by one auditable rank score; staycation-finder and vacation-planner remain directly invocable for a known mode. All three share one pool of skills and tools. A fact-guard gate blocks any report whose figures lack stored captures, a fresh second look, or allowed sources.",
   "author": {
     "name": "pallab-de"

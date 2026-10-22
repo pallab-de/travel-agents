@@ -87,6 +87,12 @@ an encrypted store you control:
    `secrets/.env.enc` + `secrets/.env.key`, verifies the round trip, then deletes the plaintext file itself.
 3. Confirm everything's in place: `python "<plugin root>/skills/environment-setup/scripts/setup_check.py"`.
 
+The encryption is not tied to you or your computer: `.env.key` sits beside `.env.enc`, and anyone holding both can decrypt them anywhere. Keep that
+folder out of git (it is ignored) and out of cloud-sync folders (OneDrive, Dropbox, iCloud Drive, Google Drive). The setup step asks you where to keep it and
+warns if it is in a synced folder; the recommended place is a per-user local folder (Windows `%LOCALAPPDATA%\travel-agents\secrets`, macOS
+`~/Library/Application Support/travel-agents/secrets`, Linux `~/.config/travel-agents/secrets`) named by `TRAVEL_SECRETS_DIR`. In cloud sessions or CI, set the key
+as an environment variable of the same name (`GOOGLE_MAPS_API_KEY`) and no file is needed.
+
 Already have an encrypted store from another trip? Point `TRAVEL_SECRETS_DIR` at that folder instead of making
 a new key every time. Need to add or change a key later? `decrypt_env.py` reverses step 2 for exactly as long
 as you need to edit the file, then `encrypt_env.py` closes the window again. Full mechanics, including why

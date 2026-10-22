@@ -8,6 +8,7 @@ variable TRAVEL_SECRETS_DIR to point at a different folder instead -- for exampl
 you already maintain for another project, so every project on your machine can share one Google Maps key
 instead of encrypting a fresh one each time.
 """
+import os
 import sys
 from pathlib import Path
 
@@ -21,7 +22,11 @@ class MissingSecret(KeyError):
 
 
 def load_key(name: str) -> str:
-    """Load one named secret (e.g. 'GOOGLE_MAPS_API_KEY') from the encrypted env. Never print the result."""
+    """Load one named secret (e.g. 'GOOGLE_MAPS_API_KEY'). An environment variable of that name wins when it is set and not blank (how cloud
+    sessions, CI and containers hand a plugin its keys, on any operating system); otherwise it comes from the encrypted env. Never print the result."""
+    env = os.environ.get(name)
+    if env and env.strip():
+        return env.strip()
     d = secrets_dir()
     enc, key = d / '.env.enc', d / '.env.key'
     if not enc.exists() or not key.exists():

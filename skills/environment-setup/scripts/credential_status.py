@@ -8,6 +8,7 @@ Run from the project's own folder (same convention as setup_check.py):
     python <plugin root>/skills/environment-setup/scripts/credential_status.py [--verify]
 --verify also proves SERPAPI_API_KEY works, using SerpApi's free account endpoint (no search is spent).
 """
+import os
 import sys
 from pathlib import Path
 
@@ -44,15 +45,16 @@ def present_names():
     never an exception, if no encrypted store exists yet - that's just "nothing is set", not an error here."""
     d = secrets_dir()
     enc, key = d / ".env.enc", d / ".env.key"
+    from_env = {name for name, _ in KNOWN_CREDENTIALS if (os.environ.get(name) or "").strip()}   # an environment variable of the same name counts (cloud, CI)
     if not (enc.exists() and key.exists()):
-        return set()
+        return from_env
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from secrets_util import load_secrets
     try:
         values = load_secrets(enc, key)
     except Exception as e:   # a store that is there but unreadable is NOT an empty store
         raise StoreUnreadable(type(e).__name__) from e
-    return {k for k, v in values.items() if str(v or "").strip()}
+    return from_env | {k for k, v in values.items() if str(v or "").strip()}
 
 
 def flightclaw_status():
@@ -95,7 +97,14 @@ def main():
         print(f"The encrypted store is present but cannot be decrypted ({e}): wrong .env.key, a corrupt .env.enc, or the "
               f"'cryptography' package is missing. Do NOT run encrypt_env.py over it. Restore the matching key, or ask the user.")
         return 1
-    print("Plugin-managed credentials (encrypted secrets store):")
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from secrets_util import synced_folder, recommended_dir
+    where = synced_folder(secrets_dir())
+    if where and (secrets_dir() / ".env.enc").exists():
+        print(f"WARNING: the secrets folder {secrets_dir()} is inside {where}. The key file sits beside the encrypted file, so {where} now holds everything "
+              f"needed to decrypt your keys. Ask the user whether to move it to a local-only folder such as {recommended_dir()} "
+              f"(set TRAVEL_SECRETS_DIR to it), then rotate the keys that were stored here.")
+    print("Plugin-managed credentials (encrypted secrets store, or an environment variable of the same name):")
     for name, what in KNOWN_CREDENTIALS:
         mark = "[ok]" if name in present else "[  ]"
         print(f"  {mark} {name:<28} {what}")

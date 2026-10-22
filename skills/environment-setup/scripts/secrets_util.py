@@ -26,6 +26,45 @@ def secrets_dir() -> Path:
     return Path(d) if d else Path.cwd() / 'secrets'
 
 
+SYNC_MARKERS = (("OneDrive", "OneDrive"), ("Dropbox", "Dropbox"), ("iCloud", "iCloud Drive"), ("com~apple~CloudDocs", "iCloud Drive"),
+                ("Mobile Documents", "iCloud Drive"), ("Google Drive", "Google Drive"), ("GoogleDrive", "Google Drive"), ("pCloud", "pCloud"),
+                ("Nextcloud", "Nextcloud"), ("Box Sync", "Box"))
+
+
+def synced_folder(path) -> str | None:
+    """The cloud-sync service whose folder `path` sits in (OneDrive, Dropbox, iCloud Drive, Google Drive, ...), or None. Judged from the folder names
+    in the path and from the sync roots the services announce in the environment. A hint, not a guarantee: a mapped or custom-named sync folder is not seen."""
+    try:
+        p = Path(path).expanduser().resolve()
+    except OSError:
+        p = Path(path)
+    for var in ("OneDrive", "OneDriveConsumer", "OneDriveCommercial"):
+        root = os.environ.get(var)
+        if root:
+            try:
+                p.relative_to(Path(root).resolve())
+                return "OneDrive"
+            except (ValueError, OSError):
+                pass
+    for part in p.parts:
+        for marker, name in SYNC_MARKERS:
+            if part == marker or part.startswith(marker + " -") or part.startswith(marker + "-"):
+                return name
+    return None
+
+
+def recommended_dir() -> Path:
+    """A per-user folder that no sync service watches: %LOCALAPPDATA%\\travel-agents\\secrets (Windows), ~/Library/Application Support/travel-agents/secrets
+    (macOS), $XDG_CONFIG_HOME or ~/.config /travel-agents/secrets (Linux)."""
+    if sys.platform.startswith("win"):
+        base = Path(os.environ.get("LOCALAPPDATA") or Path.home() / "AppData" / "Local")
+    elif sys.platform == "darwin":
+        base = Path.home() / "Library" / "Application Support"
+    else:
+        base = Path(os.environ.get("XDG_CONFIG_HOME") or Path.home() / ".config")
+    return base / "travel-agents" / "secrets"
+
+
 def generate_key() -> bytes:
     return Fernet.generate_key()
 
@@ -135,6 +174,12 @@ def selftest() -> int:
     except ValueError:
         cases.append(('a corrupt store raises', True))
     cases.append(('a quoted value with a trailing comment loses the quotes; `export KEY=...` is KEY', parse_env_bytes(b'A="x y" # note\nexport B=2') == {'A': 'x y', 'B': '2'}))
+    import tempfile
+    tmp = Path(tempfile.gettempdir())
+    cases.append(('a folder inside OneDrive / Dropbox / iCloud / Google Drive is called synced; a plain local folder is not',
+                  synced_folder(tmp / 'OneDrive' / 'Documents' / 'Trip' / 'secrets') == 'OneDrive' and synced_folder(tmp / 'Dropbox' / 'trip') == 'Dropbox'
+                  and synced_folder(tmp / 'Mobile Documents' / 'com~apple~CloudDocs' / 't') == 'iCloud Drive' and synced_folder(tmp / '.config' / 'travel-agents' / 'secrets') is None))
+    cases.append(('the recommended folder is per-user and not in a sync folder', synced_folder(recommended_dir()) is None and recommended_dir().name == 'secrets'))
     cases.append(('a leading BOM is not part of the first key', parse_env_bytes(b'\xef\xbb\xbfA=1\nB=2') == {'A': '1', 'B': '2'}))
     vals = {'A': 'plain', 'B': 'has space', 'C': 'x # y', 'D': 'q"uote'}
     cases.append(('values with spaces, # and quotes survive a write and a read', parse_env_bytes(chr(10).join(env_line(k, v) for k, v in vals.items()).encode()) == vals))

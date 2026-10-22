@@ -80,6 +80,11 @@ def main():
 
     if _override:
         print(f'  [i]   Using TRAVEL_SECRETS_DIR override ({SECRETS_DIR}).')
+    from secrets_util import synced_folder, recommended_dir
+    where = synced_folder(SECRETS_DIR)
+    if where:
+        print(f'  [!]   {SECRETS_DIR} is inside {where}: the key file beside the encrypted file would be synced to the cloud with it. '
+              f'Prefer a local-only folder such as {recommended_dir()} (set TRAVEL_SECRETS_DIR to it), or confirm with the user that syncing is acceptable.')
     all_ok &= check('the secrets folder is gitignored (or outside any git repo)', secrets_ignored(),
                     'Add the secrets folder to .gitignore before committing anything.')
 

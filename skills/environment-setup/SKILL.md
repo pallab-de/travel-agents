@@ -41,6 +41,27 @@ into chat away from leaking. The encrypted form means the only two files on disk
 44-byte key, meaningless without the matching `.env.enc`) and `.env.enc` (unreadable without that key) — both
 gitignored, and Claude is never the one creating or reading the plaintext.
 
+### Where the keys live — confirm this with the user once
+
+The encryption is **not tied to a person or a machine**. `.env.key` is a random key that sits in the same folder as `.env.enc`; anyone who holds *both*
+files can decrypt on any computer, and anyone with only one cannot. What the encryption buys you is that no key is ever plain text in a file that an
+assistant, a `grep` or a screen-share can read. What keeps the pair private is **where the folder is**. So the folder must never be committed (it is
+gitignored) and should not sit in a folder that a sync service uploads (OneDrive, Dropbox, iCloud Drive, Google Drive), because the sync would carry the
+key file and the encrypted file to the cloud together.
+
+Before the first key is written, **ask the user** (AskUserQuestion, one question, and do not ask again once answered) where to keep the store:
+
+| Choice | What it means |
+|---|---|
+| **Default: `secrets/` in this project folder** | Nothing to configure. Fine if the project folder is local-only. If `setup_check.py` or `credential_status.py` print a warning that it is inside OneDrive / Dropbox / iCloud / Google Drive, recommend one of the next two. |
+| **A per-user local folder** (recommended when the project folder is synced) | One store shared by every trip, kept out of any sync folder. Windows `%LOCALAPPDATA%\travel-agents\secrets`; macOS `~/Library/Application Support/travel-agents/secrets`; Linux `~/.config/travel-agents/secrets`. The user sets `TRAVEL_SECRETS_DIR` to it once (Windows: `setx TRAVEL_SECRETS_DIR "%LOCALAPPDATA%\travel-agents\secrets"`, then restart the terminal and Claude Code; macOS/Linux: `export TRAVEL_SECRETS_DIR=...` in the shell profile). |
+| **An existing store from another project** | Point `TRAVEL_SECRETS_DIR` at it. |
+| **Environment variables, no files** (cloud sessions, CI, containers) | Set `GOOGLE_MAPS_API_KEY` (and any other name from the table below) in the environment. An environment variable of the same name is used before the encrypted store, on every operating system. Nothing is written to disk. |
+
+Never ask the user to paste a key into the chat. If the store is already inside a synced folder, say so plainly, offer to help move it (copy the two files
+with the user's own file manager or shell; do not open them), and tell the user that the keys which were synced should be **rotated** at the provider,
+because a cloud copy may remain in its version history. Whatever the answer, run `setup_check.py` afterwards and report any warning it prints.
+
 ### First-time setup (you do this yourself; do not ask Claude to open or create the plaintext file)
 
 1. Copy `skills/environment-setup/scripts/.env.template` to `secrets/.env` in your project folder.
@@ -95,6 +116,8 @@ The first time `travel-agent` runs in a project folder, walk through **every cre
 across any trip type, in one pass** — not lazily, one key at a time, as a later stage happens to need it. `staycation-finder`/`vacation-planner` can still
 reach this section lazily if a user invokes them directly without going through `travel-agent` first.
 
+0. **Where the keys live.** If no store exists yet, or `credential_status.py` below prints a WARNING that the secrets folder is in a cloud-synced folder, ask the
+   user the "Where the keys live" question above before anything else, and apply the answer (default, per-user local folder, existing store, or environment variables).
 1. Run `python <plugin root>/skills/environment-setup/scripts/credential_status.py` from the project folder.
    It never reads or prints a value — only which named credentials are already set — so re-running the
    walkthrough on a later run **never re-prompts for a key that's already there.**

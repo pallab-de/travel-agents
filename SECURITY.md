@@ -27,6 +27,9 @@ pull request:
 
 - API keys belong only in the encrypted store: `secrets/.env.enc` and `secrets/.env.key`. The `secrets/` folder
   is ignored by `.gitignore`.
+- The encryption is symmetric and **not user- or machine-specific**: the key file sits beside the encrypted file, so anyone who obtains both can decrypt them.
+  Keep the folder out of cloud-sync folders (OneDrive, Dropbox, iCloud Drive, Google Drive); the setup check warns when it is in one. Point `TRAVEL_SECRETS_DIR`
+  at a per-user local folder, or in cloud sessions and CI supply the key as an environment variable of the same name, which is used before the store.
 - Plaintext `.env` files must not be committed. `encrypt_env.py` deletes the plaintext after it verifies the
   encrypted copy.
 - Check before you commit: `git status` should not list `secrets/`, `.env`, `*.key` or `*.enc` files.
