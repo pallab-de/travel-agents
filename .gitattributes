@@ -1,0 +1,7 @@
+# One line ending everywhere, so a clone on Windows, macOS or Linux holds the same bytes (the calibration fixtures are pinned by hash).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary

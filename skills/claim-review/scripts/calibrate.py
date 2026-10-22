@@ -27,7 +27,7 @@ CAL = HERE.parent / 'calibration'
 SALT = 'claim-review-fixture-v1'
 # The answer key's own hash, pinned here as well as in the fixture folder: editing key.json to make a reviewer pass changes
 # this file in the same commit, where a reviewer of the change can see it. build_fixtures.py --write rewrites the dict.
-PINNED_KEYS = {'itinerary': 'da1933c72063b0e8f384bfddc9810994b477e40da20ff6fb964bc9c5ede4f3ce', 'stay': '997ddedc9423b34c8d1c033f536eff0f3ab90b407ffcd2e39d5abf9ea71b77f8'}
+PINNED_KEYS = {'itinerary': '44769dbdbcf6a59c842a8b29c3cb66d84a2b6d20f8d26c39faaec8a77262f90d', 'stay': '1a790a953632f1010ba2824893d99e57f659f2492d0bc1afc08600eef5c287bb'}
 HIERARCHICAL = ('itinerary', 'stay')   # a finding on a container (a card, a day) speaks for the rows inside it
 ROLE_FAMILY = {'facts': 'C', 'judgement': 'L', 'plan': None, 'content': None}
 if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
