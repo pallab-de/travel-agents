@@ -1,0 +1,53 @@
+{
+  "_comment": "Copy this into the project's own working folder as config.json, then fill it in from the user's answers. Every value is null until the user decides it; validate_config.py refuses a null that is not marked 'n/a, user confirmed'. Every later skill reads this file. home_base_address is the starting point the report will show in its drive-time links: an area, a station or a landmark, never a street address.",
+  "city": null,
+  "home_base_address": null,
+  "drive_time_cap_min": null,
+  "drive_time_cap_extended_min": null,
+  "drive_time_extended_needs_reason": null,
+  "search_weekend": {
+    "check_in": null,
+    "check_out": null,
+    "out_departure_iso": null,
+    "back_departure_iso": null,
+    "tz": null
+  },
+  "avoid_date_windows": [],
+  "drop_for_date_unavailability": null,
+  "group": {
+    "adults": null,
+    "children": [],
+    "pets": []
+  },
+  "hard_filters": {
+    "whole_property_only": null,
+    "min_bedrooms": null,
+    "pool_required": null,
+    "pool_private_only": null,
+    "pet_friendly_required": null,
+    "hotel_rooms": null,
+    "hotel_guests_per_room": null,
+    "hotel_min_stars": null
+  },
+  "real_bed_rule": {
+    "adults_need_beds": null,
+    "children_can_share_adult_bed": null,
+    "notes": null
+  },
+  "budget": {
+    "total_or_per_night": null,
+    "amount": null,
+    "currency": null
+  },
+  "deliverable": {
+    "format": null,
+    "save_path": null
+  },
+  "apis": {
+    "review_provider": {
+      "authorized": null,
+      "which": null,
+      "budget_calls": null
+    }
+  }
+}

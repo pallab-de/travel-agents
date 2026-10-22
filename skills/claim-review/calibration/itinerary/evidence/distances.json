@@ -1,0 +1,137 @@
+[
+ {
+  "from": "airport-harrowgate",
+  "to": "hotel-marlow",
+  "minutes": 45
+ },
+ {
+  "from": "hotel-marlow",
+  "to": "old-quarter",
+  "minutes": 15
+ },
+ {
+  "from": "old-quarter",
+  "to": "kettle-crumb",
+  "minutes": 8
+ },
+ {
+  "from": "hotel-marlow",
+  "to": "castle-hill",
+  "minutes": 20
+ },
+ {
+  "from": "castle-hill",
+  "to": "marrow-market",
+  "minutes": 45
+ },
+ {
+  "from": "marrow-market",
+  "to": "riverside-park",
+  "minutes": 10
+ },
+ {
+  "from": "riverside-park",
+  "to": "fennel-house",
+  "minutes": 12
+ },
+ {
+  "from": "hotel-marlow",
+  "to": "kettle-crumb",
+  "minutes": 10
+ },
+ {
+  "from": "hotel-marlow",
+  "to": "station-harrowgate",
+  "minutes": 10
+ },
+ {
+  "from": "station-harrowgate",
+  "to": "station-selmere",
+  "minutes": 135
+ },
+ {
+  "from": "station-selmere",
+  "to": "selmere-grand",
+  "minutes": 10
+ },
+ {
+  "from": "selmere-grand",
+  "to": "harbour-promenade",
+  "minutes": 10
+ },
+ {
+  "from": "harbour-promenade",
+  "to": "quay-cafe",
+  "minutes": 5
+ },
+ {
+  "from": "selmere-grand",
+  "to": "old-fort",
+  "minutes": 25
+ },
+ {
+  "from": "old-fort",
+  "to": "salt-house",
+  "minutes": 15
+ },
+ {
+  "from": "selmere-grand",
+  "to": "botanical-house",
+  "minutes": 15
+ },
+ {
+  "from": "selmere-grand",
+  "to": "harbour-aquarium",
+  "minutes": 20
+ },
+ {
+  "from": "harbour-aquarium",
+  "to": "quay-cafe",
+  "minutes": 5
+ },
+ {
+  "from": "selmere-grand",
+  "to": "salt-house",
+  "minutes": 12
+ },
+ {
+  "from": "selmere-grand",
+  "to": "quay-cafe",
+  "minutes": 10
+ },
+ {
+  "from": "selmere-grand",
+  "to": "pier-grill",
+  "minutes": 12
+ },
+ {
+  "from": "harbour-promenade",
+  "to": "pier-grill",
+  "minutes": 6
+ },
+ {
+  "from": "selmere-grand",
+  "to": "lighthouse-tour",
+  "minutes": 30
+ },
+ {
+  "from": "selmere-grand",
+  "to": "airport-selmere",
+  "minutes": 35
+ },
+ {
+  "from": "botanical-house",
+  "to": "selmere-grand",
+  "minutes": 15
+ },
+ {
+  "from": "salt-house",
+  "to": "botanical-house",
+  "minutes": 20
+ },
+ {
+  "from": "quay-cafe",
+  "to": "salt-house",
+  "minutes": 8
+ }
+]

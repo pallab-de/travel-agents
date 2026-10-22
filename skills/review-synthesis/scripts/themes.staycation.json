@@ -1,0 +1,20 @@
+{
+ "pet": "\\b(?:pet|pets|dog|dogs|puppy|puppies|doggo)\\b",
+ "kids": "\\b(?:kid|kids|child|children|toddler|toddlers|baby|babies|family|families)\\b",
+ "pool_good": "pool[^.]{0,60}\\b(?:clean|great|nice|amazing|good|spacious|big|large|fun|awesome|well maintained|maintained)\\b|\\b(?:clean|great|nice|amazing|good|spacious|big|large|awesome)\\b[^.]{0,30}pool",
+ "pool_bad": "pool[^.]{0,60}\\b(?:dirty|green|small|cold|smell\\w*|not clean|unclean|algae|shallow|no water|empty|not working|stagnant|tiny)\\b|\\b(?:dirty|green|small|smelly|unclean|tiny)\\b[^.]{0,20}pool",
+ "clean_bad": "\\b(?:dirty|not clean|unclean|unhygienic|smell|smells|smelly|stink\\w*|cockroach\\w*|insects?|ants|mosquito\\w*|bugs?|flies|stains?|stained|mold|mould|filthy|lizards?|spiders?|rats?|bedbugs?)\\b",
+ "staff_good": "\\b(?:caretaker|care taker|host|staff|manager|cook)\\b[^.]{0,80}\\b(?:helpful|friendly|great|kind|cooperative|responsive|excellent|amazing|good|polite)\\b",
+ "staff_bad": "\\b(?:caretaker|care taker|host|staff|manager)\\b[^.]{0,80}\\b(?:rude|unresponsive|not helpful|not responding|arrogant|unprofessional|misbehav\\w*)\\b",
+ "food": "\\b(?:food|meal|breakfast|lunch|dinner|bbq|barbecue|cook|chef)\\b",
+ "noise": "\\b(?:noise|noisy|loud|party|parties|dj|music)\\b",
+ "privacy": "\\b(?:privacy|cctv|cameras?|other guests|another group|campus|shared)\\b",
+ "police": "\\b(?:police|raid|inspection)\\b",
+ "charges": "\\b(?:extra charge\\w*|overcharg\\w*|hidden|additional (?:charge|payment|cost)|charged extra|demanded|deposit)\\b",
+ "mattress": "\\b(?:mattress|mattresses|cot|bedding)\\b",
+ "access": "\\b(?:road|roads|gps|google maps|find|reach|remote|isolated|bumpy|rough|patchy)\\b",
+ "water_power": "\\b(?:no water|water (?:issue|problem|shortage)|power (?:cut|outage|issue)|no electricity|no hot water|geyser)\\b",
+ "view_nature": "\\b(?:view|views|nature|greenery|peaceful|serene|scenic|sunrise|sunset|stars|quiet|calm|garden|lawn|trees|mango)\\b",
+ "safe": "\\b(?:secure|safe|safety|fenced|fence|gated)\\b",
+ "value": "\\b(?:value for money|worth|affordable|overpriced|expensive|costly)\\b"
+}

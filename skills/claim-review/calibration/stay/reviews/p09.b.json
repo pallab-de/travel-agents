@@ -1,0 +1,147 @@
+{
+ "method": "google-places-api",
+ "retrieved_at": "2030-05-06T00:00:00Z",
+ "note": "synthetic example data",
+ "reviews": [
+  {
+   "id": "b0",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Peaceful, easy to unwind here (guest 1 of 20, platform B).",
+   "sha256": "db0b6d7de9f0c8c840e84cb3342dccd7ab8102868e664f7eb2f46a7cf5bfdb86"
+  },
+  {
+   "id": "b1",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] The caretaker was very helpful with everything (guest 2 of 20, platform B).",
+   "sha256": "1997186fa63ee6202118601adf050d0f50b5c0850d4d61c39bb125dad23b5812"
+  },
+  {
+   "id": "b2",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Clean, comfortable, a well kept garden (guest 3 of 20, platform B).",
+   "sha256": "31fd0bbc55ac4dc594727d7c4f922bf1c2b16e4e3c571197f849328fbacd8c7d"
+  },
+  {
+   "id": "b3",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] The host was welcoming and breakfast was generous (guest 4 of 20, platform B).",
+   "sha256": "69841a4ca6e74d54f24e29d19ad6e70346da761e47da1218a2270d36f733b700"
+  },
+  {
+   "id": "b4",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] The caretaker was very helpful with everything (guest 5 of 20, platform B).",
+   "sha256": "33249e02122cd6f64b42f39d0f4265c7862e1507989ebb7edf69430eb5b1be66"
+  },
+  {
+   "id": "b5",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Spotless rooms and a lovely terrace (guest 6 of 20, platform B).",
+   "sha256": "8b6372f05524788a7a615f08bbdc049215c6e8df433ce8356fc81860811401e7"
+  },
+  {
+   "id": "b6",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] The caretaker was very helpful with everything (guest 7 of 20, platform B).",
+   "sha256": "114c0b77f0bbeff41ed65fb0a0c0cd926bf9c74afdc85f04a28b561f41071fe0"
+  },
+  {
+   "id": "b7",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Spotless rooms and a lovely terrace (guest 8 of 20, platform B).",
+   "sha256": "2d673831af2da0c7c7a1b3631b3435f818bf84957615d7f3db7e5331c88ae5de"
+  },
+  {
+   "id": "b8",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Peaceful, easy to unwind here (guest 9 of 20, platform B).",
+   "sha256": "eac7476ecf1eb01b221292dfb391c636bd39a9e4b8af0069e036c4962df49605"
+  },
+  {
+   "id": "b9",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Spotless rooms and a lovely terrace (guest 10 of 20, platform B).",
+   "sha256": "8bae79911816bef5cd648d53df5a03df20c4fb6ec1ff13b5333b8af12ab74dca"
+  },
+  {
+   "id": "b10",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Clean, comfortable, a well kept garden (guest 11 of 20, platform B).",
+   "sha256": "191d5933febf55b7dc65f7f46ddde40ae00a72dbfd6fbf50fea927072493d35e"
+  },
+  {
+   "id": "b11",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Clean, comfortable, a well kept garden (guest 12 of 20, platform B).",
+   "sha256": "c119ae89812d0ce83fa3b6c8bb333f1cd676f97d2931a487fa1acc1e697684b1"
+  },
+  {
+   "id": "b12",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Beautiful setting and very clean (guest 13 of 20, platform B).",
+   "sha256": "e9738d65184bc7248d661803ecf3e9886f562f6e94bfa744e3b0c14bdec9bc38"
+  },
+  {
+   "id": "b13",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Peaceful, easy to unwind here (guest 14 of 20, platform B).",
+   "sha256": "56f060f9eee370e46c749542f9673d435c4a24c666f1dabcbe318b5ef811f605"
+  },
+  {
+   "id": "b14",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] The host was welcoming and breakfast was generous (guest 15 of 20, platform B).",
+   "sha256": "580f5045585bdb2039050f8a53c9cf2644f614ffef422a7e18a00700d43b89d7"
+  },
+  {
+   "id": "b15",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Beautiful setting and very clean (guest 16 of 20, platform B).",
+   "sha256": "1ad2fb55eb7ea1f1c6494fbe7833645b68a42677c344c87b9073c6d0c33a3be5"
+  },
+  {
+   "id": "b16",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic b] The host was welcoming and breakfast was generous (guest 17 of 20, platform B).",
+   "sha256": "f93d60673ed38ea54b23c8aaf027844814b78068f22a5fcc15e716cbdf217b68"
+  },
+  {
+   "id": "b17",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic b] The caretaker was very helpful with everything (guest 18 of 20, platform B).",
+   "sha256": "83f3b4fdc4792634d25f3ab16f6d81a77aeec9d5b7d703c45bf08ce4e02ddf4b"
+  },
+  {
+   "id": "b18",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Clean, comfortable, a well kept garden (guest 19 of 20, platform B).",
+   "sha256": "d2dd64f3486da5a77232e6d12faebd8aa719e6bcfd65964c2a9c4d539a6510c9"
+  },
+  {
+   "id": "b19",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic b] Peaceful, easy to unwind here (guest 20 of 20, platform B).",
+   "sha256": "86298ff002e00b8a5079c535e60d9d7bbb4d3fdf8a9b13540866d8dea60df3f1"
+  }
+ ]
+}

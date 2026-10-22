@@ -1,0 +1,110 @@
+{
+ "p01": {
+  "url": "https://stays.platform-a.test/p01",
+  "price_for_2_nights": 540,
+  "currency": "EUR",
+  "rating": 4.2,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Larkspur Lakehouse: EUR 540 for 2 nights. 4.2 from 20 reviews. Lake view from the terrace. Games room with a table-tennis table."
+ },
+ "p02": {
+  "url": "https://stays.platform-a.test/p02",
+  "price_for_2_nights": 460,
+  "currency": "EUR",
+  "rating": 4.2,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Willow Brook Farm: EUR 460 for 2 nights. 4.2 from 20 reviews. Garden and orchard view. Board games and a pool table in the barn."
+ },
+ "p03": {
+  "url": "https://stays.platform-a.test/p03",
+  "price_for_2_nights": 395,
+  "currency": "EUR",
+  "rating": 4.0,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Amber Hollow Lodge: EUR 395 for 2 nights. 4.0 from 20 reviews. Hill view from two bedrooms. Garden games and a hammock area."
+ },
+ "p04": {
+  "url": "https://stays.platform-a.test/p04",
+  "price_for_2_nights": 610,
+  "currency": "EUR",
+  "rating": 4.6,
+  "reviews": 20,
+  "captured_at": "2029-12-02",
+  "page_text": "Juniper Ridge Retreat: EUR 610 for 2 nights. 4.6 from 20 reviews. Lake view from every bedroom. Games room and a heated pool."
+ },
+ "p05": {
+  "url": "https://stays.platform-a.test/p05",
+  "price_for_2_nights": 365,
+  "currency": "EUR",
+  "rating": 3.9,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Corvin Meadow Villa: EUR 365 for 2 nights. 3.9 from 20 reviews. Courtyard view. Two bicycles to borrow."
+ },
+ "p06": {
+  "url": "https://stays.platform-a.test/p06",
+  "price_for_2_nights": 430,
+  "currency": "EUR",
+  "rating": 4.0,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Hollis Grove Stay: EUR 430 for 2 nights. 4.0 from 20 reviews. Fields all around. Outdoor table tennis."
+ },
+ "p07": {
+  "url": "https://stays.platform-a.test/p07",
+  "price_for_2_nights": 500,
+  "currency": "EUR",
+  "rating": 4.2,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Kestrel Orchard House: EUR 500 for 2 nights. 4.2 from 20 reviews. Orchard view. Games room."
+ },
+ "p08": {
+  "url": "https://stays.platform-a.test/p08",
+  "price_for_2_nights": 340,
+  "currency": "EUR",
+  "rating": 3.6,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Merrow Stone Cottage: EUR 340 for 2 nights. 3.6 from 20 reviews. Village view. None listed."
+ },
+ "p09": {
+  "url": "https://stays.platform-a.test/p09",
+  "price_for_2_nights": 480,
+  "currency": "EUR",
+  "rating": 4.9,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Alder Cove Cottage: EUR 480 for 2 nights. 4.9 from 20 reviews. Cove view from the garden. Kayaks to borrow."
+ },
+ "p10": {
+  "url": "https://stays.platform-a.test/p10",
+  "price_for_2_nights": 445,
+  "currency": "EUR",
+  "rating": 4.2,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Redmere Brook House: EUR 445 for 2 nights. 4.2 from 20 reviews. Brook view. Games cupboard. Also listed as Brook House before its rename."
+ },
+ "p11": {
+  "url": "https://stays.platform-a.test/p11",
+  "price_for_2_nights": 330,
+  "currency": "EUR",
+  "rating": 4.0,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Stonecroft Roadside Lodge: EUR 330 for 2 nights. 4.0 from 20 reviews. Hill view. Games room."
+ },
+ "p12": {
+  "url": "https://stays.platform-a.test/p12",
+  "price_for_2_nights": 515,
+  "currency": "EUR",
+  "rating": 4.2,
+  "reviews": 20,
+  "captured_at": "2030-05-04",
+  "page_text": "Tarrant Glen Farm: EUR 515 for 2 nights. 4.2 from 20 reviews. Lake view from the terrace. Pool table in the barn. Not available 17-19 May."
+ }
+}

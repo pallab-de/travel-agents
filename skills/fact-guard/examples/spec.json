@@ -1,0 +1,406 @@
+{
+  "policy": {
+    "banned": [
+      "not captured",
+      "sold out",
+      "smallest",
+      "cheapest",
+      "the only",
+      "tbd",
+      "todo",
+      "lorem"
+    ],
+    "review_methods": [
+      "apify-booking-reviews",
+      "apify-google-maps-reviews-scraper",
+      "google-places-api"
+    ],
+    "source_classes": {
+      "verified_ota": [
+        "stays.example-hotels.test",
+        "rooms.example-ota.test"
+      ],
+      "review_platform": [
+        "reviews.example-hotels.test"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "eyebrow": "Example report - synthetic data",
+      "title": "Three inns for a weekend in Valmora",
+      "lead": "Three invented inns compared on guest rating and nightly price. Every figure in this example comes from a stored capture.",
+      "kpis": [
+        {
+          "value": "3",
+          "label": "inns checked",
+          "derived": {
+            "count": "ranking"
+          }
+        }
+      ],
+      "image": "hero-placeholder.png",
+      "image_alt": "Abstract placeholder image for the synthetic example",
+      "image_credit": "Generated placeholder for the synthetic example; replace with a photo you hold a licence for."
+    },
+    {
+      "type": "cards",
+      "id": "ranking",
+      "title": "Ranking",
+      "intro": "Ranked by rating, then price.",
+      "items": [
+        {
+          "rank": 1,
+          "name": "Aster Inn",
+          "url": "https://stays.example-hotels.test/aster",
+          "price": 289.0,
+          "priceNote": "per night, EUR",
+          "score": 4.0,
+          "area": "Mid-range",
+          "badges": [],
+          "facts": [],
+          "pros": [
+            "Quiet rooms facing the garden"
+          ],
+          "watch": [
+            "Thin corridor walls"
+          ],
+          "verdict": "Best rated of the three at a middle price.",
+          "score_basis": {
+            "method": "read-reviews",
+            "formula": "rank-score-v2",
+            "rubric": "Weighted mean of the star ratings of the synthetic reviews read on two sites (verified-stay site 1.5, review platform 1.0), rounded to one decimal.",
+            "sources": [
+              {
+                "name": "Google Maps reviews",
+                "url": "https://reviews.example-hotels.test/aster",
+                "read": 20,
+                "reviews_file": "reviews/aster-google.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "Booking site reviews",
+                "url": "https://rooms.example-ota.test/aster",
+                "read": 20,
+                "reviews_file": "reviews/aster-booking.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "web research",
+                "url": "https://stays.example-hotels.test/aster/specs",
+                "read_at": "2030-05-06"
+              }
+            ],
+            "themes": [
+              {
+                "text": "support and comfort praised",
+                "sentiment": "pos",
+                "review_ids": [
+                  "g0",
+                  "b0"
+                ]
+              },
+              {
+                "text": "fixed or thin parts criticised",
+                "sentiment": "neg",
+                "review_ids": [
+                  "g1",
+                  "b1"
+                ]
+              }
+            ],
+            "guest_score": 4.0,
+            "group_fit": []
+          },
+          "dossier": [
+            {
+              "title": "Map listing",
+              "not_found": "synthetic example: no map listing exists"
+            },
+            {
+              "title": "Guest ratings",
+              "not_found": "synthetic example: ratings are the reviews read in score_basis"
+            },
+            {
+              "title": "Guest reviews",
+              "not_found": "synthetic example: reviews are in the review files"
+            },
+            {
+              "title": "Photos",
+              "not_found": "synthetic example: no photos"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "name": "Birch Inn",
+          "url": "https://stays.example-hotels.test/birch",
+          "price": 199.0,
+          "priceNote": "per night, EUR",
+          "score": 3.3,
+          "area": "Budget-plus",
+          "badges": [],
+          "facts": [],
+          "pros": [
+            "Calm breakfast room"
+          ],
+          "watch": [
+            "Mattresses are showing wear"
+          ],
+          "verdict": "Good value if the mattresses suit you.",
+          "score_basis": {
+            "method": "read-reviews",
+            "formula": "rank-score-v2",
+            "rubric": "Weighted mean of the star ratings of the synthetic reviews read on two sites (verified-stay site 1.5, review platform 1.0), rounded to one decimal.",
+            "sources": [
+              {
+                "name": "Google Maps reviews",
+                "url": "https://reviews.example-hotels.test/birch",
+                "read": 20,
+                "reviews_file": "reviews/birch-google.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "Booking site reviews",
+                "url": "https://rooms.example-ota.test/birch",
+                "read": 20,
+                "reviews_file": "reviews/birch-booking.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "web research",
+                "url": "https://stays.example-hotels.test/birch/specs",
+                "read_at": "2030-05-06"
+              }
+            ],
+            "themes": [
+              {
+                "text": "support and comfort praised",
+                "sentiment": "pos",
+                "review_ids": [
+                  "g0",
+                  "b0"
+                ]
+              },
+              {
+                "text": "fixed or thin parts criticised",
+                "sentiment": "neg",
+                "review_ids": [
+                  "g1",
+                  "b1"
+                ]
+              }
+            ],
+            "guest_score": 3.3,
+            "group_fit": []
+          },
+          "dossier": [
+            {
+              "title": "Map listing",
+              "not_found": "synthetic example: no map listing exists"
+            },
+            {
+              "title": "Guest ratings",
+              "not_found": "synthetic example: ratings are the reviews read in score_basis"
+            },
+            {
+              "title": "Guest reviews",
+              "not_found": "synthetic example: reviews are in the review files"
+            },
+            {
+              "title": "Photos",
+              "not_found": "synthetic example: no photos"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "name": "Cedar Inn",
+          "url": "https://stays.example-hotels.test/cedar",
+          "price": 149.0,
+          "priceNote": "per night, EUR",
+          "score": 2.3,
+          "area": "Budget",
+          "badges": [],
+          "facts": [],
+          "pros": [
+            "Lowest price of the three"
+          ],
+          "watch": [
+            "Rooms face the road",
+            "Basic bedding"
+          ],
+          "verdict": "Only for a short, cheap stay.",
+          "score_basis": {
+            "method": "read-reviews",
+            "formula": "rank-score-v2",
+            "rubric": "Weighted mean of the star ratings of the synthetic reviews read on two sites (verified-stay site 1.5, review platform 1.0), rounded to one decimal.",
+            "sources": [
+              {
+                "name": "Google Maps reviews",
+                "url": "https://reviews.example-hotels.test/cedar",
+                "read": 20,
+                "reviews_file": "reviews/cedar-google.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "Booking site reviews",
+                "url": "https://rooms.example-ota.test/cedar",
+                "read": 20,
+                "reviews_file": "reviews/cedar-booking.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "web research",
+                "url": "https://stays.example-hotels.test/cedar/specs",
+                "read_at": "2030-05-06"
+              }
+            ],
+            "themes": [
+              {
+                "text": "support and comfort praised",
+                "sentiment": "pos",
+                "review_ids": [
+                  "g0",
+                  "b0"
+                ]
+              },
+              {
+                "text": "fixed or thin parts criticised",
+                "sentiment": "neg",
+                "review_ids": [
+                  "g1",
+                  "b1"
+                ]
+              }
+            ],
+            "guest_score": 2.3,
+            "group_fit": []
+          },
+          "dossier": [
+            {
+              "title": "Map listing",
+              "not_found": "synthetic example: no map listing exists"
+            },
+            {
+              "title": "Guest ratings",
+              "not_found": "synthetic example: ratings are the reviews read in score_basis"
+            },
+            {
+              "title": "Guest reviews",
+              "not_found": "synthetic example: reviews are in the review files"
+            },
+            {
+              "title": "Photos",
+              "not_found": "synthetic example: no photos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "id": "compare",
+      "title": "Side by side",
+      "intro": "Price and guest score for each inn, as in the ranking.",
+      "columns": [
+        {
+          "key": "rank",
+          "label": "Rank",
+          "type": "num"
+        },
+        {
+          "key": "name",
+          "label": "Inn",
+          "type": "text",
+          "link": true
+        },
+        {
+          "key": "price",
+          "label": "Price per night (EUR)",
+          "type": "num"
+        },
+        {
+          "key": "score",
+          "label": "Guest score",
+          "type": "num"
+        }
+      ],
+      "items": [
+        {
+          "rank": 1,
+          "name": "Aster Inn",
+          "url": "https://stays.example-hotels.test/aster",
+          "price": 289.0,
+          "score": 4.0
+        },
+        {
+          "rank": 2,
+          "name": "Birch Inn",
+          "url": "https://stays.example-hotels.test/birch",
+          "price": 199.0,
+          "score": 3.3
+        },
+        {
+          "rank": 3,
+          "name": "Cedar Inn",
+          "url": "https://stays.example-hotels.test/cedar",
+          "price": 149.0,
+          "score": 2.3
+        }
+      ]
+    },
+    {
+      "type": "method",
+      "id": "method",
+      "title": "How this was checked",
+      "items": [
+        "Each price was captured twice from the inn pages, on separate loads; each guest score is the mean of the reviews read.",
+        "Each link was checked against the allowed hosts in the policy.",
+        "A second reviewer re-checked a sample of rows after the first review, with new captures."
+      ]
+    }
+  ],
+  "footer": "Synthetic example for the fact-guard pipeline. These are not real hotels or prices.",
+  "design": {
+    "brand": "Valmora Stays (example)",
+    "ethos": "A calm, plain-spoken stay guide: three inns, the numbers behind each rating, and nothing sold harder than the evidence allows.",
+    "fonts": {
+      "display": "Fraunces",
+      "body": "Plus Jakarta Sans"
+    },
+    "palette": {
+      "bg": "#f5f3ee",
+      "surface": "#ffffff",
+      "ink": "#1c1f24",
+      "mute": "#555b66",
+      "line": "#e0ddd4",
+      "accent": "#9a3b2b",
+      "accent_ink": "#ffffff",
+      "chip": "#ece9e1",
+      "good": "#1f6b45",
+      "warn": "#8a5300",
+      "bad": "#a52a2a",
+      "eyebrow": "#f2d6a2",
+      "on_image": "#ffffff",
+      "image_overlay": "#1b1d22"
+    },
+    "palette_dark": {
+      "bg": "#121417",
+      "surface": "#1b1e23",
+      "ink": "#eceef1",
+      "mute": "#a7adb8",
+      "line": "#343842",
+      "accent": "#f0877a",
+      "accent_ink": "#121417",
+      "chip": "#262a31",
+      "good": "#5fd39a",
+      "warn": "#f0b04a",
+      "bad": "#ff8c8c",
+      "eyebrow": "#f2d6a2",
+      "on_image": "#ffffff",
+      "image_overlay": "#0c0d10"
+    }
+  }
+}

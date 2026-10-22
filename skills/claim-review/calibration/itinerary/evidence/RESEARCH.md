@@ -1,0 +1,11 @@
+# Research notes (verified facts and sources)
+- Kettle & Crumb: OPERATIONAL, 4.6 stars from 812 reviews, 08:00-22:00 daily (Google Places lookup, 20 Apr). The LocalEats site shows a 'verified' badge for it; that is the site's badge, we did not verify it ourselves.
+- Fennel House: OPERATIONAL, 4.4 from 230, Tue-Sun 12:00-23:00, closed Mondays (Google Places, 20 Apr).
+- Harbour Aquarium: OPERATIONAL, 10:00-16:00 Tue-Sun, closed Mondays (Google Places, 21 Apr).
+- Old Fort: OPERATIONAL, 09:00-17:00, closed Fridays (Google Places, 21 Apr).
+- Pier Grill: OPERATIONAL when checked on 12 Apr. (Re-check before the trip.)
+- Quay Cafe: OPERATIONAL, 08:00-20:00 daily (Google Places, 21 Apr).
+- Lighthouse Tour: 10:00-16:00 Mon-Thu, closed Fri-Sun (Google Places, 21 Apr).
+- Hotel Brindle: 5.0 stars from only 4 reviews (Google Places, 22 Apr); too few to rely on.
+- Climate normals for May, Harrowgate and Selmere: highs 14-17 C, showers on about one day in three. (July highs are about 33 C and dry; not relevant to this trip.)
+- The flight in (t1) and the train (t2) are booked (see bookings). The return flight is not booked.

@@ -1,0 +1,23 @@
+{
+  "question": "What is a workable three-day plan across Valmora and Selmere?",
+  "audience": "Two adults taking a long weekend",
+  "decision": "Book the two hotels and the train, or change the route",
+  "criteria": [
+    {
+      "name": "Feasible days",
+      "why": "Nothing impossible on the clock",
+      "how_checked": "Plan checks in the gate"
+    },
+    {
+      "name": "Fixed times",
+      "why": "A missed train costs the day",
+      "how_checked": "Two independent captures each"
+    }
+  ],
+  "out_of_scope": [
+    "Daily spending"
+  ],
+  "assumptions": [
+    "Prices are in EUR for two adults"
+  ]
+}

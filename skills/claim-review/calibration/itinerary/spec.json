@@ -1,0 +1,558 @@
+{
+ "locale": "en-GB",
+ "as_of": "2030-04-25",
+ "trip": {
+  "start": "2030-05-06",
+  "end": "2030-05-11"
+ },
+ "blocks": [
+  {
+   "type": "hero",
+   "eyebrow": "Six days, two towns",
+   "title": "Harrowgate to Selmere",
+   "lead": "A slow week for two adults and a grandparent: rest every afternoon, one train, two hotels.",
+   "kpis": [
+    {
+     "value": "6",
+     "label": "days",
+     "derived": {
+      "count": "plan"
+     }
+    },
+    {
+     "value": "2",
+     "label": "towns",
+     "derived": {
+      "distinct": "plan.city"
+     }
+    }
+   ],
+   "image": "hero-placeholder.png",
+   "image_alt": "Abstract placeholder"
+  },
+  {
+   "type": "notice",
+   "title": "Before you rely on this",
+   "items": [
+    "Hours and ratings were read in April 2030.",
+    "The return flight is not booked yet.",
+    "The train is the one fixed point of the week."
+   ]
+  },
+  {
+   "type": "booking_ledger",
+   "id": "bookings",
+   "title": "Bookings",
+   "bookings": [
+    {
+     "id": "dec-rename",
+     "name": "Hotel Marlow",
+     "category": "stay",
+     "amount": 140,
+     "currency": "EUR",
+     "status": "booked",
+     "cancel_by": "2030-05-04",
+     "check_in": "2030-05-06",
+     "check_out": "2030-05-08",
+     "note": "Confirmation HM-4471. Formerly Marlow Inn.",
+     "url": "https://stays.example.test/h1"
+    },
+    {
+     "id": "bk-h2",
+     "name": "Selmere Grand",
+     "category": "stay",
+     "amount": 210,
+     "currency": "EUR",
+     "status": "booked",
+     "cancel_by": "2030-05-10",
+     "check_in": "2030-05-08",
+     "check_out": "2030-05-11",
+     "note": "Confirmation SG-9920.",
+     "url": "https://stays.example.test/h2"
+    },
+    {
+     "id": "bk-t1",
+     "name": "Flight home to Harrowgate",
+     "category": "transit",
+     "amount": 90,
+     "currency": "EUR",
+     "status": "booked",
+     "date": "2030-05-06",
+     "note": "Confirmation FL-1101.",
+     "url": "https://tickets.example.test/t1"
+    },
+    {
+     "id": "dec-confirmed",
+     "name": "Train Harrowgate to Selmere",
+     "category": "transit",
+     "amount": 12,
+     "currency": "EUR",
+     "status": "booked",
+     "date": "2030-05-08",
+     "note": "Confirmation TR-552.",
+     "url": "https://tickets.example.test/t2"
+    },
+    {
+     "id": "bk-t3",
+     "name": "Flight Selmere to home",
+     "category": "transit",
+     "amount": 95,
+     "currency": "EUR",
+     "status": "booked",
+     "date": "2030-05-11",
+     "note": "Not yet booked.",
+     "url": "https://tickets.example.test/t3"
+    }
+   ],
+   "summary": {
+    "EUR": 1547
+   }
+  },
+  {
+   "type": "transport_leg",
+   "id": "legs",
+   "title": "The train",
+   "legs": [
+    {
+     "label": "Harrowgate to Selmere",
+     "from": "Harrowgate",
+     "to": "Selmere",
+     "modes": [
+      {
+       "mode": "rail",
+       "time_minutes": 155,
+       "source": "https://rail.example.test/h-s",
+       "captured_at": "2030-04-20T00:00:00Z",
+       "segments": [
+        {
+         "label": "Taxi to the station",
+         "time_minutes": 10,
+         "source": "https://maps.example.test/a",
+         "captured_at": "2030-04-20T00:00:00Z"
+        },
+        {
+         "label": "Train",
+         "time_minutes": 135,
+         "main": true,
+         "source": "https://rail.example.test/h-s",
+         "captured_at": "2030-04-20T00:00:00Z"
+        },
+        {
+         "label": "Walk to the hotel",
+         "time_minutes": 10,
+         "source": "https://maps.example.test/b",
+         "captured_at": "2030-04-20T00:00:00Z"
+        }
+       ]
+      }
+     ],
+     "recommendation": {
+      "mode": "rail",
+      "reasons": [
+       "Seats are reserved and the ride is flat."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "type": "day_plan",
+   "id": "plan",
+   "title": "Day by day",
+   "days": [
+    {
+     "id": "day-1",
+     "date": "2030-05-06",
+     "label": "Mon 6 May",
+     "city": "Harrowgate",
+     "stops": [
+      {
+       "id": "day-1-1130",
+       "time": "11:30",
+       "name": "Land at Harrowgate airport",
+       "type": "transfer",
+       "note": "Taxi to the hotel takes about 45 minutes."
+      },
+      {
+       "id": "day-1-1300",
+       "time": "13:00",
+       "name": "Check in at Hotel Marlow",
+       "type": "stay",
+       "note": "Lunch in the room."
+      },
+      {
+       "id": "day-1-1400",
+       "time": "14:00",
+       "name": "Rest at the hotel",
+       "type": "free",
+       "note": "No plans until 16:00."
+      },
+      {
+       "id": "day-1-1630",
+       "time": "16:30",
+       "name": "Old Quarter walk",
+       "type": "sight",
+       "note": "A slow walk on level ground."
+      },
+      {
+       "id": "day-1-1830",
+       "time": "18:30",
+       "name": "Dinner at Kettle & Crumb",
+       "type": "meal",
+       "note": "Preferred; the alternate is Fennel House on day 2. We confirmed a table with the restaurant."
+      }
+     ]
+    },
+    {
+     "id": "day-2",
+     "date": "2030-05-07",
+     "label": "Tue 7 May",
+     "city": "Harrowgate",
+     "stops": [
+      {
+       "id": "day-2-0900",
+       "time": "09:00",
+       "name": "Breakfast at the hotel",
+       "type": "meal"
+      },
+      {
+       "id": "day-2-1000",
+       "time": "10:00",
+       "name": "Castle Hill",
+       "type": "sight",
+       "note": "A gentle loop with benches."
+      },
+      {
+       "id": "day-2-1030",
+       "time": "10:30",
+       "name": "Lunch at Marrow Market",
+       "type": "meal",
+       "note": "Open 08:00 to 14:00 on Tuesdays."
+      },
+      {
+       "id": "day-2-1400",
+       "time": "14:00",
+       "name": "Rest at the hotel",
+       "type": "free"
+      },
+      {
+       "id": "day-2-1630",
+       "time": "16:30",
+       "name": "Riverside Park",
+       "type": "sight",
+       "note": "Level paths and a river walk. No complaints found online, so it is safe for a grandparent."
+      },
+      {
+       "id": "day-2-1900",
+       "time": "19:00",
+       "name": "Dinner at Kettle & Crumb",
+       "type": "meal",
+       "note": "Preferred; the alternate is Fennel House."
+      }
+     ]
+    },
+    {
+     "id": "day-3",
+     "date": "2030-05-08",
+     "label": "Wed 8 May",
+     "city": "Selmere",
+     "stops": [
+      {
+       "id": "day-3-0830",
+       "time": "08:30",
+       "name": "Check out of Marlow House",
+       "type": "transfer",
+       "note": "Taxi to the station takes 10 minutes."
+      },
+      {
+       "id": "dec-train",
+       "time": "10:00",
+       "name": "Train to Selmere",
+       "type": "train",
+       "note": "Takes 2 h 15 min; seats are reserved.",
+       "leg": "Harrowgate to Selmere"
+      },
+      {
+       "id": "day-3-1300",
+       "time": "13:00",
+       "name": "Check in at Selmere Grand",
+       "type": "stay"
+      },
+      {
+       "id": "day-3-1415",
+       "time": "14:15",
+       "name": "Rest at the hotel",
+       "type": "free"
+      },
+      {
+       "id": "day-3-1630",
+       "time": "16:30",
+       "name": "Harbour promenade stroll",
+       "type": "sight"
+      },
+      {
+       "id": "day-3-1830",
+       "time": "18:30",
+       "name": "Dinner at Pier Grill",
+       "type": "meal",
+       "note": "Preferred; the alternate is Quay Cafe."
+      }
+     ]
+    },
+    {
+     "id": "day-4",
+     "date": "2030-05-09",
+     "label": "Fri 9 May",
+     "city": "Selmere",
+     "stops": [
+      {
+       "id": "day-4-0900",
+       "time": "09:00",
+       "name": "Breakfast at the hotel",
+       "type": "meal"
+      },
+      {
+       "id": "dec-fort",
+       "time": "10:00",
+       "name": "Old Fort",
+       "type": "sight",
+       "note": "Open every day except Friday, so today works."
+      },
+      {
+       "id": "day-4-1300",
+       "time": "13:00",
+       "name": "Lunch at Salt House",
+       "type": "meal"
+      },
+      {
+       "id": "day-4-1415",
+       "time": "14:15",
+       "name": "Rest at the hotel",
+       "type": "free"
+      },
+      {
+       "id": "day-4-1630",
+       "time": "16:30",
+       "name": "Botanical House",
+       "type": "sight",
+       "note": "A glasshouse loop."
+      },
+      {
+       "id": "day-4-1900",
+       "time": "19:00",
+       "name": "Dinner at the hotel restaurant",
+       "type": "meal"
+      }
+     ]
+    },
+    {
+     "id": "day-5",
+     "date": "2030-05-10",
+     "label": "Fri 10 May",
+     "city": "Selmere",
+     "stops": [
+      {
+       "id": "day-5-0900",
+       "time": "09:00",
+       "name": "Breakfast at the hotel",
+       "type": "meal"
+      },
+      {
+       "id": "day-5-1000",
+       "time": "10:00",
+       "name": "Lighthouse Tour",
+       "type": "sight"
+      },
+      {
+       "id": "day-5-1245",
+       "time": "12:45",
+       "name": "Lunch at Quay Cafe",
+       "type": "meal"
+      },
+      {
+       "id": "day-5-1415",
+       "time": "14:15",
+       "name": "Rest at the hotel",
+       "type": "free"
+      },
+      {
+       "id": "day-5-1430",
+       "time": "14:30",
+       "name": "Souvenir stroll on the promenade",
+       "type": "sight",
+       "note": "This respects the 14:00-16:00 rest window."
+      },
+      {
+       "id": "day-5-1900",
+       "time": "19:00",
+       "name": "Dinner at Salt House",
+       "type": "meal",
+       "note": "Preferred."
+      }
+     ]
+    },
+    {
+     "id": "day-6",
+     "date": "2030-05-11",
+     "label": "Sat 11 May",
+     "city": "Selmere",
+     "stops": [
+      {
+       "id": "day-6-0830",
+       "time": "08:30",
+       "name": "Check out of Selmere Grand",
+       "type": "transfer",
+       "note": "Taxi to the airport takes 35 minutes. This is the shortest transfer of the trip."
+      },
+      {
+       "id": "day-6-1030",
+       "time": "10:30",
+       "name": "Arrive at Selmere airport",
+       "type": "transfer"
+      },
+      {
+       "id": "day-6-1300",
+       "time": "13:00",
+       "name": "Flight home",
+       "type": "free",
+       "note": "Not yet booked; see the open decisions."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "decision_log",
+   "id": "decisions",
+   "title": "Decisions",
+   "entries": [
+    {
+     "id": "dec-museum",
+     "date": "2030-04-20",
+     "title": "Skip the museum",
+     "decision": "Harrowgate Museum is closed on Mondays, so it is skipped; Castle Hill on day 2 covers the same period.",
+     "status": "decided"
+    },
+    {
+     "id": "dec-rating",
+     "date": "2030-04-12",
+     "title": "Pick the hotels",
+     "decision": "Hotel Marlow (4.4, 412 reviews) for Harrowgate and Selmere Grand (4.5, 388), the higher-rated of the two, for Selmere.",
+     "status": "decided"
+    },
+    {
+     "id": "log-brindle",
+     "date": "2030-04-22",
+     "title": "Fallback hotel",
+     "decision": "Hotel Brindle (5.0 from 4 reviews) is our top pick for Selmere if Selmere Grand falls through.",
+     "status": "open"
+    }
+   ]
+  },
+  {
+   "type": "research_notes",
+   "id": "notes",
+   "title": "Research notes",
+   "notes": [
+    {
+     "id": "note-kettle",
+     "topic": "Kettle & Crumb",
+     "finding": "Verified; open 08:00 to 22:00 daily; 4.6 stars from 812 reviews.",
+     "sources": [
+      {
+       "name": "Lookup",
+       "url": "https://places.example.test/kettle-crumb",
+       "read_at": "2030-04-20"
+      }
+     ]
+    },
+    {
+     "id": "note-fennel",
+     "topic": "Fennel House",
+     "finding": "Open Tuesday to Sunday, 12:00 to 23:00; 4.4 stars from 230 reviews.",
+     "sources": [
+      {
+       "name": "Lookup",
+       "url": "https://places.example.test/fennel-house",
+       "read_at": "2030-04-20"
+      }
+     ]
+    },
+    {
+     "id": "note-quay",
+     "topic": "Quay Cafe",
+     "finding": "Open 08:00 to 22:00 daily; 4.2 stars from 640 reviews.",
+     "sources": [
+      {
+       "name": "Lookup",
+       "url": "https://places.example.test/quay-cafe",
+       "read_at": "2030-04-21"
+      }
+     ]
+    },
+    {
+     "id": "note-weather",
+     "topic": "Weather",
+     "finding": "May in Harrowgate and Selmere: expect dry, sunny days of about 33 C, so pack light summer clothes.",
+     "sources": [
+      {
+       "name": "Lookup",
+       "url": "https://climate.example.test/normals",
+       "read_at": "2030-04-22"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "method",
+   "id": "method",
+   "title": "How this was checked",
+   "items": [
+    "Hours and ratings were looked up on the dates in the notes.",
+    "Open items are listed under decisions."
+   ]
+  }
+ ],
+ "footer": "Synthetic trip for calibration. Not a real itinerary.",
+ "design": {
+  "brand": "Valmora Stays (example)",
+  "ethos": "A calm, plain-spoken stay guide: three inns, the numbers behind each rating, and nothing sold harder than the evidence allows.",
+  "fonts": {
+   "display": "Fraunces",
+   "body": "Plus Jakarta Sans"
+  },
+  "palette": {
+   "bg": "#f5f3ee",
+   "surface": "#ffffff",
+   "ink": "#1c1f24",
+   "mute": "#555b66",
+   "line": "#e0ddd4",
+   "accent": "#9a3b2b",
+   "accent_ink": "#ffffff",
+   "chip": "#ece9e1",
+   "good": "#1f6b45",
+   "warn": "#8a5300",
+   "bad": "#a52a2a",
+   "eyebrow": "#f2d6a2",
+   "on_image": "#ffffff",
+   "image_overlay": "#1b1d22"
+  },
+  "palette_dark": {
+   "bg": "#121417",
+   "surface": "#1b1e23",
+   "ink": "#eceef1",
+   "mute": "#a7adb8",
+   "line": "#343842",
+   "accent": "#f0877a",
+   "accent_ink": "#121417",
+   "chip": "#262a31",
+   "good": "#5fd39a",
+   "warn": "#f0b04a",
+   "bad": "#ff8c8c",
+   "eyebrow": "#f2d6a2",
+   "on_image": "#ffffff",
+   "image_overlay": "#0c0d10"
+  }
+ }
+}

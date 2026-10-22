@@ -1,0 +1,24 @@
+{
+ "h1": {
+  "pnr": "HM-4471",
+  "amount": 140,
+  "cancel_until": "2030-05-04",
+  "status": "booked"
+ },
+ "h2": {
+  "pnr": "SG-9920",
+  "amount": 210,
+  "cancel_until": "2030-05-06",
+  "status": "booked"
+ },
+ "t1": {
+  "pnr": "FL-1101",
+  "amount": 90,
+  "status": "booked"
+ },
+ "t2": {
+  "pnr": "TR-552",
+  "amount": 12,
+  "status": "booked"
+ }
+}

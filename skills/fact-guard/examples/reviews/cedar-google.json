@@ -1,0 +1,147 @@
+{
+  "method": "google-places-api",
+  "retrieved_at": "2030-05-06T00:00:00Z",
+  "note": "synthetic example data",
+  "reviews": [
+    {
+      "id": "g0",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Fine for a night but not for a week (guest 1 of 20).",
+      "sha256": "4d0fc0e89e58cd365ae3a13c3e9661aaa2c0dddb3b8dad8c70459bfa1edbad48"
+    },
+    {
+      "id": "g1",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Cheap and cheerful with basic bedding (guest 2 of 20).",
+      "sha256": "786b84fefcc7cbed38165642831b91274eec6a76016854914055b92b27b70731"
+    },
+    {
+      "id": "g2",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Rooms face the road and it is loud (guest 3 of 20).",
+      "sha256": "20dd386b806eace8410d6dd09f1f14307fb3b0a269099f765440e2e2a84ffa36"
+    },
+    {
+      "id": "g3",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Hot water ran out during the morning rush (guest 4 of 20).",
+      "sha256": "ed30a39dd3ec200550a23c79a7eefa7eba8eea1667e84841d147222eb9f1a001"
+    },
+    {
+      "id": "g4",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Reception was friendly and quick to help (guest 5 of 20).",
+      "sha256": "9213390f75937011c7a41b99839cd12d2cd788d3b42cd8ab21b8711fe7aa1e71"
+    },
+    {
+      "id": "g5",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] The corridor smells of cleaning products (guest 6 of 20).",
+      "sha256": "d202a703b07597414704331f8347c1ce894d9edf0039afd00ae62c42ed0cb7e3"
+    },
+    {
+      "id": "g6",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Fine for a night but not for a week (guest 7 of 20).",
+      "sha256": "963f85127d9dddc91ccf712f5c5e76285f667f1337a480d12e62e04b6f7fc7d1"
+    },
+    {
+      "id": "g7",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Cheap and cheerful with basic bedding (guest 8 of 20).",
+      "sha256": "bf6f0a8273ebc6e9f5584bc89d89e0b72c44a734094193ce90a282e9683344b8"
+    },
+    {
+      "id": "g8",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Rooms face the road and it is loud (guest 9 of 20).",
+      "sha256": "62d29d93179d464da4e6f440862b416eb730ce915d6d0192e9029424eefee6e5"
+    },
+    {
+      "id": "g9",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Hot water ran out during the morning rush (guest 10 of 20).",
+      "sha256": "07374da61443f51ccfca53f46ca1d582c26f263ecc9db300977a8e8e29994b8d"
+    },
+    {
+      "id": "g10",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Reception was friendly and quick to help (guest 11 of 20).",
+      "sha256": "bf80d973aacb74cfd191c7f0d753bbf3749036a973b74f7b0d094b3426841104"
+    },
+    {
+      "id": "g11",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] The corridor smells of cleaning products (guest 12 of 20).",
+      "sha256": "799bd93576562043aab1aec5299255c13663e357e61de26b5257eb186edd645a"
+    },
+    {
+      "id": "g12",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Fine for a night but not for a week (guest 13 of 20).",
+      "sha256": "a4f124b9c61494c121388e3e893a80a1ffe96636cd1058db697bdcd2584ebe60"
+    },
+    {
+      "id": "g13",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Cheap and cheerful with basic bedding (guest 14 of 20).",
+      "sha256": "6ec2fc8c4264010875a600998bf0dc7a898b8957ef9a1156ff5b36157afc122d"
+    },
+    {
+      "id": "g14",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Rooms face the road and it is loud (guest 15 of 20).",
+      "sha256": "bbdc450aa0a896bf4eaad1549eac0754633951e57c1370b7d398377b250aad3f"
+    },
+    {
+      "id": "g15",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Hot water ran out during the morning rush (guest 16 of 20).",
+      "sha256": "e7fc66f3ed3e7f8b787b918da96fd494f1a0a6995cb522ca1a7b18832635f7a7"
+    },
+    {
+      "id": "g16",
+      "stars": 1,
+      "when": "2030-04-01",
+      "text": "[synthetic] Reception was friendly and quick to help (guest 17 of 20).",
+      "sha256": "b4eea56f420c148f79f3c1511c6db3151f8390a55bfb257eb319bb42b5d1c5f3"
+    },
+    {
+      "id": "g17",
+      "stars": 1,
+      "when": "2030-04-01",
+      "text": "[synthetic] The corridor smells of cleaning products (guest 18 of 20).",
+      "sha256": "40f894cee9796c01f0145c096ca892cd4cadff46627ccf7e6c3c22d6012c7a96"
+    },
+    {
+      "id": "g18",
+      "stars": 1,
+      "when": "2030-04-01",
+      "text": "[synthetic] Fine for a night but not for a week (guest 19 of 20).",
+      "sha256": "15b7494115cc60c17f51c58cc7bca27b32b2da875acaf5d39d6dd69f88780429"
+    },
+    {
+      "id": "g19",
+      "stars": 1,
+      "when": "2030-04-01",
+      "text": "[synthetic] Cheap and cheerful with basic bedding (guest 20 of 20).",
+      "sha256": "12714324ab243638e08927e60edc03226ed73db2986ddbc0cbd84e95796c2d0f"
+    }
+  ]
+}

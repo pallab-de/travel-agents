@@ -1,0 +1,15 @@
+{
+  "_comment": "Copy into the project folder as plan.json and fill in BEFORE fetching starts: created_at (ISO time) and, per source, a name, an expected_min_yield above 0, and a stop_rule if the source is open-ended (a map-grid sweep, a multi-page search; set open_ended true). check_approach.py fails the unedited template and an open-ended source with no stop_rule. See SKILL.md.",
+  "project": "",
+  "sources": [
+    {
+      "name": "",
+      "why": "",
+      "variants": [],
+      "expected_min_yield": 0,
+      "open_ended": false,
+      "stop_rule": ""
+    }
+  ],
+  "created_at": ""
+}

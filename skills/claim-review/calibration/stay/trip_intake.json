@@ -1,0 +1,71 @@
+{
+ "shape": "stay",
+ "destination": {
+  "home_base": "Home city",
+  "route": []
+ },
+ "dates": {
+  "start": "2030-05-17",
+  "end": "2030-05-19",
+  "flexible": false
+ },
+ "group": {
+  "adults": 2,
+  "children": [
+   {
+    "age": 15
+   },
+   {
+    "age": 16
+   }
+  ],
+  "pets": []
+ },
+ "group_profile": {
+  "traits": [],
+  "traits_confirmed": true,
+  "notes": "A quiet weekend, a view, and something to do on site; two light sleepers."
+ },
+ "fit_profile": {
+  "confirmed": true,
+  "criteria": [
+   {
+    "id": "lake_view",
+    "weight": 0.3,
+    "polarity": "+",
+    "evidence": "fact",
+    "why": "we want to unwind by the water"
+   },
+   {
+    "id": "on_site_games",
+    "weight": 0.2,
+    "polarity": "+",
+    "evidence": "fact",
+    "why": "the teenagers need something to do"
+   },
+   {
+    "id": "near_main_road",
+    "weight": 0.2,
+    "polarity": "-",
+    "evidence": "fact",
+    "why": "two of us sleep lightly"
+   }
+  ]
+ },
+ "context": {
+  "trip_nature": "unwind",
+  "pace": "relaxed",
+  "time_in_place": "mostly at the stay",
+  "splurge": "value first",
+  "stay_style": [
+   "nature retreat"
+  ],
+  "affinities": "not_applicable"
+ },
+ "budget": {
+  "amount": 700,
+  "currency": "EUR",
+  "period": "total"
+ },
+ "created_at": "2030-05-01T09:00:00Z"
+}

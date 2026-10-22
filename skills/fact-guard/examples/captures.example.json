@@ -1,0 +1,59 @@
+[
+  {
+    "row": "ranking:Aster Inn|url",
+    "url": "https://stays.example-hotels.test/aster",
+    "value": "https://stays.example-hotels.test/aster",
+    "raw": "page title Aster Inn | HTTP 200",
+    "http_status": 200
+  },
+  {
+    "row": "ranking:Aster Inn|price",
+    "url": "https://stays.example-hotels.test/aster",
+    "value": "EUR 289.00",
+    "raw": "nightly rate EUR 289.00"
+  },
+  {
+    "row": "ranking:Aster Inn|price",
+    "url": "https://stays.example-hotels.test/aster",
+    "value": "EUR 289.00",
+    "raw": "nightly rate EUR 289.00"
+  },
+  {
+    "row": "ranking:Birch Inn|url",
+    "url": "https://stays.example-hotels.test/birch",
+    "value": "https://stays.example-hotels.test/birch",
+    "raw": "page title Birch Inn | HTTP 200",
+    "http_status": 200
+  },
+  {
+    "row": "ranking:Birch Inn|price",
+    "url": "https://stays.example-hotels.test/birch",
+    "value": "EUR 199.00",
+    "raw": "nightly rate EUR 199.00"
+  },
+  {
+    "row": "ranking:Birch Inn|price",
+    "url": "https://stays.example-hotels.test/birch",
+    "value": "EUR 199.00",
+    "raw": "nightly rate EUR 199.00"
+  },
+  {
+    "row": "ranking:Cedar Inn|url",
+    "url": "https://stays.example-hotels.test/cedar",
+    "value": "https://stays.example-hotels.test/cedar",
+    "raw": "page title Cedar Inn | HTTP 200",
+    "http_status": 200
+  },
+  {
+    "row": "ranking:Cedar Inn|price",
+    "url": "https://stays.example-hotels.test/cedar",
+    "value": "EUR 149.00",
+    "raw": "nightly rate EUR 149.00"
+  },
+  {
+    "row": "ranking:Cedar Inn|price",
+    "url": "https://stays.example-hotels.test/cedar",
+    "value": "EUR 149.00",
+    "raw": "nightly rate EUR 149.00"
+  }
+]

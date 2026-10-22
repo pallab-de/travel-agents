@@ -1,0 +1,579 @@
+{
+  "locale": "en-GB",
+  "as_of": "2030-04-20",
+  "trip": {
+    "start": "2030-05-06",
+    "end": "2030-05-08"
+  },
+  "policy": {
+    "banned": [
+      "not captured",
+      "sold out",
+      "smallest",
+      "cheapest",
+      "the only",
+      "tbd",
+      "todo",
+      "lorem"
+    ],
+    "review_methods": [
+      "apify-booking-reviews",
+      "google-places-api"
+    ],
+    "source_classes": {
+      "rail": [
+        "rail.example-travel.test",
+        "tickets.example-trains.test"
+      ],
+      "maps_measure": [
+        "maps.example-travel.test"
+      ],
+      "review_platform": [
+        "reviews.example-hotels.test"
+      ],
+      "verified_ota": [
+        "stays.example-hotels.test",
+        "rooms.example-ota.test"
+      ]
+    }
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "eyebrow": "Example itinerary - synthetic data",
+      "title": "Three days in Valmora and Selmere",
+      "lead": "A fictional trip showing every itinerary block: the route, the stays, each day, the bookings and the reasoning.",
+      "kpis": [
+        {
+          "value": "3",
+          "label": "days",
+          "derived": {
+            "count": "plan"
+          }
+        },
+        {
+          "value": "2",
+          "label": "towns",
+          "derived": {
+            "distinct": "plan.city"
+          }
+        },
+        {
+          "value": "2",
+          "label": "bookings",
+          "derived": {
+            "count": "bookings"
+          }
+        }
+      ],
+      "image": "hero-placeholder.png",
+      "image_alt": "Abstract placeholder image for the synthetic example",
+      "image_credit": "Generated placeholder for the synthetic example."
+    },
+    {
+      "type": "notice",
+      "title": "Read these first",
+      "items": [
+        "Every time, price and booking amount below comes from a stored capture.",
+        "The train is the one fixed point; the rest of each day moves around it.",
+        "Both hotels are free to cancel until the date shown in the bookings."
+      ]
+    },
+    {
+      "type": "transport_leg",
+      "id": "legs",
+      "title": "Getting between the towns",
+      "legs": [
+        {
+          "label": "Valmora to Selmere",
+          "from": "Valmora",
+          "to": "Selmere",
+          "modes": [
+            {
+              "mode": "rail",
+              "time_minutes": 145,
+              "source": "https://rail.example-travel.test/valmora-selmere",
+              "captured_at": "2030-04-01T09:00:00Z",
+              "segments": [
+                {
+                  "label": "Taxi to the station",
+                  "time_minutes": 15,
+                  "source": "https://maps.example-travel.test/route/valmora-selmere",
+                  "captured_at": "2030-04-01T09:00:00Z"
+                },
+                {
+                  "label": "Train",
+                  "time_minutes": 120,
+                  "main": true,
+                  "source": "https://rail.example-travel.test/valmora-selmere",
+                  "captured_at": "2030-04-01T09:00:00Z"
+                },
+                {
+                  "label": "Walk to the hotel",
+                  "time_minutes": 10,
+                  "source": "https://maps.example-travel.test/route/valmora-selmere",
+                  "captured_at": "2030-04-01T09:00:00Z"
+                }
+              ]
+            },
+            {
+              "mode": "road",
+              "time_minutes": 165,
+              "distance_km": 190,
+              "source": "https://maps.example-travel.test/route/valmora-selmere",
+              "captured_at": "2030-04-01T09:00:00Z"
+            }
+          ],
+          "recommendation": {
+            "mode": "rail",
+            "reasons": [
+              "Twenty minutes faster door to door, and no parking in Selmere."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "day_plan",
+      "id": "plan",
+      "title": "Day by day",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2030-05-06",
+          "label": "Mon 6 May",
+          "city": "Valmora",
+          "stops": [
+            {
+              "time": "09:30",
+              "name": "Breakfast at the hotel",
+              "type": "meal"
+            },
+            {
+              "time": "10:30",
+              "name": "Old fort",
+              "type": "sight",
+              "note": "Open daily; the climb is the main effort."
+            },
+            {
+              "time": "14:00",
+              "name": "Rest at the hotel",
+              "type": "free"
+            },
+            {
+              "time": "19:30",
+              "name": "Dinner at Salt House",
+              "type": "reservation",
+              "url": "https://www.salt-house.example.test/reserve",
+              "source": "https://www.salt-house.example.test/reserve",
+              "note": "Table booked for two.",
+              "status": "booked"
+            }
+          ]
+        },
+        {
+          "id": "day-2",
+          "date": "2030-05-07",
+          "label": "Tue 7 May",
+          "city": "Selmere",
+          "stops": [
+            {
+              "time": "08:30",
+              "name": "Check out of the harbour hotel",
+              "type": "transfer"
+            },
+            {
+              "time": "09:10",
+              "name": "Train to Selmere",
+              "type": "train",
+              "leg": "Valmora to Selmere",
+              "url": "https://rail.example-travel.test/valmora-selmere",
+              "source": "https://rail.example-travel.test/valmora-selmere"
+            },
+            {
+              "time": "12:00",
+              "name": "Lunch near the station",
+              "type": "meal"
+            },
+            {
+              "time": "14:00",
+              "name": "Check in at Selmere Grand",
+              "type": "stay"
+            },
+            {
+              "time": "19:00",
+              "name": "Pier Grill",
+              "type": "meal",
+              "status": "rejected",
+              "note": "Closed for refurbishment that week; dinner is at the hotel instead."
+            },
+            {
+              "time": "19:00",
+              "name": "Dinner at the hotel",
+              "type": "meal"
+            }
+          ]
+        },
+        {
+          "id": "day-3",
+          "date": "2030-05-08",
+          "label": "Wed 8 May",
+          "city": "Selmere",
+          "stops": [
+            {
+              "time": "10:00",
+              "name": "Botanical house",
+              "type": "sight"
+            },
+            {
+              "time": "13:00",
+              "name": "Lunch on the quay",
+              "type": "meal"
+            },
+            {
+              "time": "16:00",
+              "name": "Check out and leave",
+              "type": "transfer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "booking_ledger",
+      "id": "bookings",
+      "title": "Bookings",
+      "bookings": [
+        {
+          "name": "Valmora Harbour Hotel",
+          "category": "stay",
+          "amount": 150,
+          "currency": "EUR",
+          "status": "upcoming",
+          "cancel_by": "2030-05-04",
+          "check_in": "2030-05-06",
+          "check_out": "2030-05-07",
+          "url": "https://www.valmora-harbour.example.test/booking",
+          "source": "evidence/booking-confirmation.txt"
+        },
+        {
+          "name": "Selmere Grand",
+          "category": "stay",
+          "amount": 180,
+          "currency": "EUR",
+          "status": "upcoming",
+          "cancel_by": "2030-05-05",
+          "check_in": "2030-05-07",
+          "check_out": "2030-05-08",
+          "url": "https://www.selmere-grand.example.test/booking",
+          "source": "evidence/booking-confirmation.txt"
+        }
+      ],
+      "summary": {
+        "EUR": 330
+      }
+    },
+    {
+      "type": "cost_comparison",
+      "id": "fares",
+      "title": "Which train fare",
+      "options": [
+        {
+          "label": "Advance fare",
+          "cash": {
+            "amount": 38,
+            "currency": "EUR"
+          },
+          "url": "https://rail.example-travel.test/valmora-selmere",
+          "source": "https://rail.example-travel.test/valmora-selmere",
+          "captured_at": "2030-04-01T09:00:00Z",
+          "mechanic": "Fixed to one train. A change costs the full fare again."
+        },
+        {
+          "label": "Flexible fare",
+          "cash": {
+            "amount": 62,
+            "currency": "EUR"
+          },
+          "url": "https://rail.example-travel.test/valmora-selmere",
+          "source": "https://rail.example-travel.test/valmora-selmere",
+          "captured_at": "2030-04-01T09:00:00Z",
+          "mechanic": "Any train that day, free changes until departure."
+        }
+      ],
+      "recommendation": {
+        "option": "Flexible fare",
+        "reasons": [
+          "The 09:10 train is the one fixed point, so a free change is worth the difference."
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "id": "stays",
+      "title": "Where to stay in Selmere",
+      "intro": "Ranked by guest rating, then price.",
+      "items": [
+        {
+          "rank": 1,
+          "name": "Aster Inn",
+          "url": "https://stays.example-hotels.test/aster",
+          "price": 289.0,
+          "priceNote": "per night, EUR",
+          "score": 4.0,
+          "area": "Mid-range",
+          "badges": [],
+          "facts": [],
+          "pros": [
+            "Quiet rooms facing the garden"
+          ],
+          "watch": [
+            "Thin corridor walls"
+          ],
+          "verdict": "Best rated of the three at a middle price.",
+          "score_basis": {
+            "method": "read-reviews",
+            "formula": "rank-score-v2",
+            "rubric": "Weighted mean of the star ratings of the synthetic reviews read on two sites (verified-stay site 1.5, review platform 1.0), rounded to one decimal.",
+            "sources": [
+              {
+                "name": "Google Maps reviews",
+                "url": "https://reviews.example-hotels.test/aster",
+                "read": 20,
+                "reviews_file": "reviews/aster-google.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "Booking site reviews",
+                "url": "https://rooms.example-ota.test/aster",
+                "read": 20,
+                "reviews_file": "reviews/aster-booking.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "web research",
+                "url": "https://stays.example-hotels.test/aster/specs",
+                "read_at": "2030-05-06"
+              }
+            ],
+            "themes": [
+              {
+                "text": "support and comfort praised",
+                "sentiment": "pos",
+                "review_ids": [
+                  "g0",
+                  "b0"
+                ]
+              },
+              {
+                "text": "fixed or thin parts criticised",
+                "sentiment": "neg",
+                "review_ids": [
+                  "g1",
+                  "b1"
+                ]
+              }
+            ],
+            "guest_score": 4.0,
+            "group_fit": []
+          },
+          "dossier": [
+            {
+              "title": "Map listing",
+              "not_found": "synthetic example: no map listing exists"
+            },
+            {
+              "title": "Guest ratings",
+              "not_found": "synthetic example: ratings are the reviews read in score_basis"
+            },
+            {
+              "title": "Guest reviews",
+              "not_found": "synthetic example: reviews are in the review files"
+            },
+            {
+              "title": "Photos",
+              "not_found": "synthetic example: no photos"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "name": "Birch Inn",
+          "url": "https://stays.example-hotels.test/birch",
+          "price": 199.0,
+          "priceNote": "per night, EUR",
+          "score": 3.3,
+          "area": "Budget-plus",
+          "badges": [],
+          "facts": [],
+          "pros": [
+            "Calm breakfast room"
+          ],
+          "watch": [
+            "Mattresses are showing wear"
+          ],
+          "verdict": "Good value if the mattresses suit you.",
+          "score_basis": {
+            "method": "read-reviews",
+            "formula": "rank-score-v2",
+            "rubric": "Weighted mean of the star ratings of the synthetic reviews read on two sites (verified-stay site 1.5, review platform 1.0), rounded to one decimal.",
+            "sources": [
+              {
+                "name": "Google Maps reviews",
+                "url": "https://reviews.example-hotels.test/birch",
+                "read": 20,
+                "reviews_file": "reviews/birch-google.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "Booking site reviews",
+                "url": "https://rooms.example-ota.test/birch",
+                "read": 20,
+                "reviews_file": "reviews/birch-booking.json",
+                "read_at": "2030-05-06"
+              },
+              {
+                "name": "web research",
+                "url": "https://stays.example-hotels.test/birch/specs",
+                "read_at": "2030-05-06"
+              }
+            ],
+            "themes": [
+              {
+                "text": "support and comfort praised",
+                "sentiment": "pos",
+                "review_ids": [
+                  "g0",
+                  "b0"
+                ]
+              },
+              {
+                "text": "fixed or thin parts criticised",
+                "sentiment": "neg",
+                "review_ids": [
+                  "g1",
+                  "b1"
+                ]
+              }
+            ],
+            "guest_score": 3.3,
+            "group_fit": []
+          },
+          "dossier": [
+            {
+              "title": "Map listing",
+              "not_found": "synthetic example: no map listing exists"
+            },
+            {
+              "title": "Guest ratings",
+              "not_found": "synthetic example: ratings are the reviews read in score_basis"
+            },
+            {
+              "title": "Guest reviews",
+              "not_found": "synthetic example: reviews are in the review files"
+            },
+            {
+              "title": "Photos",
+              "not_found": "synthetic example: no photos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "decision_log",
+      "id": "decisions",
+      "title": "Decisions",
+      "entries": [
+        {
+          "date": "2030-04-02",
+          "title": "Rail over road",
+          "decision": "Take the train.",
+          "why": "It is twenty minutes faster door to door.",
+          "status": "decided"
+        },
+        {
+          "date": "2030-04-03",
+          "title": "Dinner in Selmere",
+          "decision": "Eat at the hotel on arrival day.",
+          "why": "Pier Grill is closed that week.",
+          "status": "decided"
+        },
+        {
+          "title": "Day 3 afternoon",
+          "decision": "Leave the afternoon open until the weather is known.",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "type": "research_notes",
+      "id": "notes",
+      "title": "Research notes",
+      "notes": [
+        {
+          "topic": "Old fort opening days",
+          "finding": "Open every day, 09:00 to 17:00.",
+          "sources": [
+            {
+              "name": "Fort visitor page",
+              "url": "https://www.old-fort.example.test/visit",
+              "read_at": "2030-04-01"
+            }
+          ],
+          "not_verified": "Ticket prices for the day."
+        }
+      ]
+    },
+    {
+      "type": "method",
+      "id": "method",
+      "title": "How this was checked",
+      "items": [
+        "Each time, fare and booking amount was captured from two independent sources.",
+        "A second reviewer re-checked a sample of rows after the first review, with new captures."
+      ]
+    }
+  ],
+  "footer": "Synthetic example for the fact-guard pipeline. These are not real places, fares or bookings.",
+  "design": {
+    "brand": "Valmora Stays (example)",
+    "ethos": "A calm, plain-spoken trip plan: the route, each day, the bookings and the reasons, with nothing stated that a capture does not support.",
+    "fonts": {
+      "display": "Fraunces",
+      "body": "Plus Jakarta Sans"
+    },
+    "palette": {
+      "bg": "#f5f3ee",
+      "surface": "#ffffff",
+      "ink": "#1c1f24",
+      "mute": "#555b66",
+      "line": "#e0ddd4",
+      "accent": "#9a3b2b",
+      "accent_ink": "#ffffff",
+      "chip": "#ece9e1",
+      "good": "#1f6b45",
+      "warn": "#8a5300",
+      "bad": "#a52a2a",
+      "eyebrow": "#f2d6a2",
+      "on_image": "#ffffff",
+      "image_overlay": "#1b1d22"
+    },
+    "palette_dark": {
+      "bg": "#121417",
+      "surface": "#1b1e23",
+      "ink": "#eceef1",
+      "mute": "#a7adb8",
+      "line": "#343842",
+      "accent": "#f0877a",
+      "accent_ink": "#121417",
+      "chip": "#262a31",
+      "good": "#5fd39a",
+      "warn": "#f0b04a",
+      "bad": "#ff8c8c",
+      "eyebrow": "#f2d6a2",
+      "on_image": "#ffffff",
+      "image_overlay": "#0c0d10"
+    }
+  }
+}

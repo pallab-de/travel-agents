@@ -1,0 +1,1701 @@
+{
+ "policy": {
+  "source_classes": {
+   "verified_ota": [
+    "stays.platform-a.test"
+   ],
+   "review_platform": [
+    "reviews.platform-b.test"
+   ],
+   "maps_measure": [
+    "maps.example-travel.test"
+   ]
+  }
+ },
+ "trip": {
+  "start": "2030-05-17",
+  "end": "2030-05-19"
+ },
+ "group_traits": [],
+ "fit_criteria": [
+  {
+   "id": "lake_view",
+   "weight": 0.3,
+   "polarity": "+",
+   "evidence": "fact"
+  },
+  {
+   "id": "on_site_games",
+   "weight": 0.2,
+   "polarity": "+",
+   "evidence": "fact"
+  },
+  {
+   "id": "near_main_road",
+   "weight": 0.2,
+   "polarity": "-",
+   "evidence": "fact"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "hero",
+   "eyebrow": "Four people, one weekend",
+   "title": "Stays near Valmora",
+   "lead": "Two adults and two teenagers who want a quiet weekend with things to do on site: twelve stays ranked on fit, guest reviews and drive time.",
+   "kpis": [
+    {
+     "value": "12",
+     "label": "stays compared",
+     "derived": {
+      "count": "ranked"
+     }
+    },
+    {
+     "value": "EUR 330.0",
+     "label": "lowest price (available)",
+     "derived": {
+      "min": "all.price"
+     }
+    }
+   ],
+   "image": "hero-placeholder.png",
+   "image_alt": "Abstract placeholder"
+  },
+  {
+   "type": "notice",
+   "title": "Read this first",
+   "items": [
+    "Guest scores come from 20 reviews on each of two sites.",
+    "Overlays reward what this group asked for and mark what it avoids.",
+    "Prices are for two nights, in euros, read on 4 May."
+   ]
+  },
+  {
+   "type": "cards",
+   "id": "ranked",
+   "title": "The shortlist",
+   "intro": "Ranked by rank score, then price.",
+   "items": [
+    {
+     "id": "p04",
+     "name": "Juniper Ridge Retreat",
+     "url": "https://stays.platform-a.test/p04",
+     "area": "Ravenmoor",
+     "rank": 1,
+     "price": 610.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 5.0,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "78 min",
+       "source": "https://maps.example-travel.test/route/p04"
+      },
+      {
+       "label": "View",
+       "value": "Lake view from every bedroom",
+       "source": "https://stays.platform-a.test/p04"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Games room and a heated pool",
+       "source": "https://stays.platform-a.test/p04"
+      }
+     ],
+     "pros": [
+      "Lake view from every bedroom"
+     ],
+     "watch": [],
+     "verdict": "Juniper Ridge Retreat: guests rate it 4.5; price checked this week. Best for this group because it ranks first.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p04",
+       "rows": [
+        [
+         "Area",
+         "Ravenmoor"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.6,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p04"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.4,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p04"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.5,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p04",
+        "read": 20,
+        "reviews_file": "reviews/p04.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p04",
+        "read": 20,
+        "reviews_file": "reviews/p04.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p04",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": [
+       {
+        "signal": "lake view",
+        "criterion": "lake_view",
+        "bump": 0.3,
+        "fact": {
+         "facts": 1
+        },
+        "reason": "they want to unwind by the water"
+       },
+       {
+        "signal": "games on site",
+        "criterion": "on_site_games",
+        "bump": 0.2,
+        "fact": {
+         "facts": 2
+        },
+        "reason": "something to do without driving"
+       }
+      ]
+     }
+    },
+    {
+     "id": "p09",
+     "name": "Alder Cove Cottage",
+     "url": "https://stays.platform-a.test/p09",
+     "area": "Northfold",
+     "rank": 2,
+     "price": 480.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.9,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "55 min",
+       "source": "https://maps.example-travel.test/route/p09"
+      },
+      {
+       "label": "View",
+       "value": "Cove view from the garden",
+       "source": "https://stays.platform-a.test/p09"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Kayaks to borrow",
+       "source": "https://stays.platform-a.test/p09"
+      }
+     ],
+     "pros": [
+      "Cove view from the garden"
+     ],
+     "watch": [],
+     "verdict": "Alder Cove Cottage: guests rate it 4.9, 55 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p09",
+       "rows": [
+        [
+         "Area",
+         "Northfold"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.9,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p09"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.8,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p09"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.9,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p09",
+        "read": 20,
+        "reviews_file": "reviews/p09.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p09",
+        "read": 20,
+        "reviews_file": "reviews/p09.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p09",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": []
+     }
+    },
+    {
+     "id": "p01",
+     "name": "Larkspur Lakehouse",
+     "url": "https://stays.platform-a.test/p01",
+     "area": "Northfold",
+     "rank": 3,
+     "price": 540.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.7,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "52 min",
+       "source": "https://maps.example-travel.test/route/p01"
+      },
+      {
+       "label": "View",
+       "value": "Garden view with a pond in the distance",
+       "source": "https://stays.platform-a.test/p01"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Games room with a table-tennis table",
+       "source": "https://stays.platform-a.test/p01"
+      }
+     ],
+     "pros": [
+      "Lake view from the terrace"
+     ],
+     "watch": [],
+     "verdict": "Larkspur Lakehouse: guests rate it 4.2, 52 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p01",
+       "rows": [
+        [
+         "Area",
+         "Northfold"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p01"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p01"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.2,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p01",
+        "read": 20,
+        "reviews_file": "reviews/p01.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p01",
+        "read": 20,
+        "reviews_file": "reviews/p01.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p01",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": [
+       {
+        "signal": "lake view",
+        "criterion": "lake_view",
+        "bump": 0.3,
+        "fact": {
+         "facts": 1
+        },
+        "reason": "they want to unwind by the water"
+       },
+       {
+        "signal": "games on site",
+        "criterion": "on_site_games",
+        "bump": 0.2,
+        "fact": {
+         "facts": 2
+        },
+        "reason": "something to do without driving"
+       }
+      ]
+     }
+    },
+    {
+     "id": "p12",
+     "name": "Tarrant Glen Farm",
+     "url": "https://stays.platform-a.test/p12",
+     "area": "Ravenmoor",
+     "rank": 4,
+     "price": 515.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.7,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "66 min",
+       "source": "https://maps.example-travel.test/route/p12"
+      },
+      {
+       "label": "View",
+       "value": "Lake view from the terrace",
+       "source": "https://stays.platform-a.test/p12"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Pool table in the barn",
+       "source": "https://stays.platform-a.test/p12"
+      }
+     ],
+     "pros": [
+      "Lake view from the terrace"
+     ],
+     "watch": [],
+     "verdict": "Tarrant Glen Farm: guests rate it 4.2, 66 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p12",
+       "rows": [
+        [
+         "Area",
+         "Ravenmoor"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p12"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p12"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.2,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p12",
+        "read": 20,
+        "reviews_file": "reviews/p12.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p12",
+        "read": 20,
+        "reviews_file": "reviews/p12.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p12",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": [
+       {
+        "signal": "lake view",
+        "criterion": "lake_view",
+        "bump": 0.3,
+        "fact": {
+         "facts": 1
+        },
+        "reason": "they want to unwind by the water"
+       },
+       {
+        "signal": "games on site",
+        "criterion": "on_site_games",
+        "bump": 0.2,
+        "fact": {
+         "facts": 2
+        },
+        "reason": "something to do without driving"
+       }
+      ]
+     },
+     "unavailable": true
+    },
+    {
+     "id": "p07",
+     "name": "Kestrel Orchard House",
+     "url": "https://stays.platform-a.test/p07",
+     "area": "Kellby",
+     "rank": 5,
+     "price": 500.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.3,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "49 min",
+       "source": "https://maps.example-travel.test/route/p07"
+      },
+      {
+       "label": "View",
+       "value": "Orchard view",
+       "source": "https://stays.platform-a.test/p07"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Games room",
+       "source": "https://stays.platform-a.test/p07"
+      }
+     ],
+     "pros": [
+      "Orchard view"
+     ],
+     "watch": [],
+     "verdict": "Kestrel Orchard House: guests rate it 4.1, 49 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p07",
+       "rows": [
+        [
+         "Area",
+         "Kellby"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p07"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.0,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p07"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.1,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p07",
+        "read": 20,
+        "reviews_file": "reviews/p07.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p07",
+        "read": 20,
+        "reviews_file": "reviews/p07.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p07",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": [
+       {
+        "signal": "games on site",
+        "criterion": "on_site_games",
+        "bump": 0.2,
+        "fact": {
+         "facts": 2
+        },
+        "reason": "something to do without driving"
+       }
+      ]
+     }
+    },
+    {
+     "id": "p02",
+     "name": "Willow Brook Farm",
+     "url": "https://stays.platform-a.test/p02",
+     "area": "Eastmere",
+     "rank": 6,
+     "price": 460.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.3,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "61 min",
+       "source": "https://maps.example-travel.test/route/p02"
+      },
+      {
+       "label": "View",
+       "value": "Garden and orchard view",
+       "source": "https://stays.platform-a.test/p02"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Board games and a pool table in the barn",
+       "source": "https://stays.platform-a.test/p02"
+      }
+     ],
+     "pros": [
+      "Garden and orchard view"
+     ],
+     "watch": [],
+     "verdict": "Willow Brook Farm: guests rate it 4.1, 61 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p02",
+       "rows": [
+        [
+         "Area",
+         "Eastmere"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p02"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.1,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p02"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.1,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p02",
+        "read": 20,
+        "reviews_file": "reviews/p02.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p02",
+        "read": 20,
+        "reviews_file": "reviews/p02.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p02",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": [
+       {
+        "signal": "games on site",
+        "criterion": "on_site_games",
+        "bump": 0.2,
+        "fact": {
+         "facts": 2
+        },
+        "reason": "something to do without driving"
+       }
+      ]
+     }
+    },
+    {
+     "id": "p03",
+     "name": "Amber Hollow Lodge",
+     "url": "https://stays.platform-a.test/p03",
+     "area": "Kellby",
+     "rank": 7,
+     "price": 455.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.1,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "44 min",
+       "source": "https://maps.example-travel.test/route/p03"
+      },
+      {
+       "label": "View",
+       "value": "Hill view from two bedrooms",
+       "source": "https://stays.platform-a.test/p03"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Garden games and a hammock area",
+       "source": "https://stays.platform-a.test/p03"
+      }
+     ],
+     "pros": [
+      "Hill view from two bedrooms"
+     ],
+     "watch": [],
+     "verdict": "Peaceful: no complaints found online, so it is quiet at night.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p03",
+       "rows": [
+        [
+         "Area",
+         "Kellby"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.0,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p03"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p03"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.1,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p03",
+        "read": 20,
+        "reviews_file": "reviews/p03.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p03",
+        "read": 20,
+        "reviews_file": "reviews/p03.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p03",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": []
+     }
+    },
+    {
+     "id": "p10",
+     "name": "Redmere Brook House",
+     "url": "https://stays.platform-a.test/p10",
+     "area": "Eastmere",
+     "rank": 8,
+     "price": 445.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.1,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "63 min",
+       "source": "https://maps.example-travel.test/route/p10"
+      },
+      {
+       "label": "View",
+       "value": "Brook view",
+       "source": "https://stays.platform-a.test/p10"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Games cupboard",
+       "source": "https://stays.platform-a.test/p10"
+      }
+     ],
+     "pros": [
+      "Brook view"
+     ],
+     "watch": [],
+     "verdict": "Redmere Brook House: guests rate it 4.1, 63 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p10",
+       "rows": [
+        [
+         "Area",
+         "Eastmere"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.2,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p10"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.0,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p10"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.1,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p10",
+        "read": 20,
+        "reviews_file": "reviews/p10.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p10",
+        "read": 20,
+        "reviews_file": "reviews/p10.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p10",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": []
+     }
+    },
+    {
+     "id": "p06",
+     "name": "Hollis Grove Stay",
+     "url": "https://stays.platform-a.test/p06",
+     "area": "Eastmere",
+     "rank": 9,
+     "price": 430.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.0,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "75 min",
+       "source": "https://maps.example-travel.test/route/p06"
+      },
+      {
+       "label": "View",
+       "value": "Fields all around",
+       "source": "https://stays.platform-a.test/p06"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Outdoor table tennis",
+       "source": "https://stays.platform-a.test/p06"
+      }
+     ],
+     "pros": [
+      "Fields all around"
+     ],
+     "watch": [],
+     "verdict": "Shortest drive of all twelve stays.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p06",
+       "rows": [
+        [
+         "Area",
+         "Eastmere"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.0,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p06"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.0,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p06"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.0,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p06",
+        "read": 20,
+        "reviews_file": "reviews/p06.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p06",
+        "read": 20,
+        "reviews_file": "reviews/p06.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p06",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": []
+     }
+    },
+    {
+     "id": "p11",
+     "name": "Stonecroft Roadside Lodge",
+     "url": "https://stays.platform-a.test/p11",
+     "area": "Kellby",
+     "rank": 10,
+     "price": 330.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.0,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "41 min",
+       "source": "https://maps.example-travel.test/route/p11"
+      },
+      {
+       "label": "View",
+       "value": "Hill view",
+       "source": "https://stays.platform-a.test/p11"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Games room",
+       "source": "https://stays.platform-a.test/p11"
+      },
+      {
+       "label": "Setting",
+       "value": "Fronts the state road",
+       "source": "https://stays.platform-a.test/p11"
+      }
+     ],
+     "pros": [
+      "Hill view"
+     ],
+     "watch": [
+      {
+       "text": "Road noise at night",
+       "review_ids": [
+        "a1",
+        "a4",
+        "a7",
+        "a9",
+        "a12",
+        "b2",
+        "b5",
+        "b8"
+       ]
+      }
+     ],
+     "verdict": "Stonecroft Roadside Lodge: guests rate it 4.0, 41 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p11",
+       "rows": [
+        [
+         "Area",
+         "Kellby"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 4.0,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p11"
+        },
+        {
+         "label": "Platform B",
+         "rating": 4.0,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p11"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 4.0,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p11",
+        "read": 20,
+        "reviews_file": "reviews/p11.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p11",
+        "read": 20,
+        "reviews_file": "reviews/p11.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p11",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [
+       {
+        "text": "Road noise at night",
+        "review_ids": [
+         "a1",
+         "a4",
+         "a7",
+         "a9",
+         "a12",
+         "b2",
+         "b5",
+         "b8"
+        ]
+       }
+      ],
+      "group_fit": [
+       {
+        "signal": "games on site",
+        "criterion": "on_site_games",
+        "bump": 0.2,
+        "fact": {
+         "facts": 2
+        },
+        "reason": "something to do without driving"
+       },
+       {
+        "signal": "road noise",
+        "criterion": "near_main_road",
+        "bump": -0.2,
+        "concern": 0,
+        "reason": "two of the group sleep lightly"
+       }
+      ]
+     }
+    },
+    {
+     "id": "p05",
+     "name": "Corvin Meadow Villa",
+     "url": "https://stays.platform-a.test/p05",
+     "area": "Northfold",
+     "rank": 11,
+     "price": 365.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 3.8,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "38 min",
+       "source": "https://maps.example-travel.test/route/p05"
+      },
+      {
+       "label": "View",
+       "value": "Courtyard view",
+       "source": "https://stays.platform-a.test/p05"
+      },
+      {
+       "label": "On-site extras",
+       "value": "Two bicycles to borrow",
+       "source": "https://stays.platform-a.test/p05"
+      }
+     ],
+     "pros": [
+      "Courtyard view",
+      "Pet policy verified by phone."
+     ],
+     "watch": [],
+     "verdict": "Corvin Meadow Villa: guests rate it 3.8, 38 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p05",
+       "rows": [
+        [
+         "Area",
+         "Northfold"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 3.9,
+         "count": 31,
+         "url": "https://stays.platform-a.test/p05"
+        },
+        {
+         "label": "Platform B",
+         "rating": 3.8,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p05"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 3.8,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p05",
+        "read": 20,
+        "reviews_file": "reviews/p05.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p05",
+        "read": 20,
+        "reviews_file": "reviews/p05.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p05",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": []
+     }
+    },
+    {
+     "id": "p08",
+     "name": "Merrow Stone Cottage",
+     "url": "https://stays.platform-a.test/p08",
+     "area": "Ravenmoor",
+     "rank": 12,
+     "price": 340.0,
+     "priceNote": "for 2 nights, EUR",
+     "score": 4.1,
+     "facts": [
+      {
+       "label": "Drive from home",
+       "value": "70 min",
+       "source": "https://maps.example-travel.test/route/p08"
+      },
+      {
+       "label": "View",
+       "value": "Village view",
+       "source": "https://stays.platform-a.test/p08"
+      },
+      {
+       "label": "On-site extras",
+       "value": "None listed",
+       "source": "https://stays.platform-a.test/p08"
+      }
+     ],
+     "pros": [
+      "Village view"
+     ],
+     "watch": [],
+     "verdict": "Merrow Stone Cottage: guests rate it 3.6, 70 min away.",
+     "dossier": [
+      {
+       "title": "Map listing",
+       "kind": "facts",
+       "source": "https://maps.example-travel.test/route/p08",
+       "rows": [
+        [
+         "Area",
+         "Ravenmoor"
+        ]
+       ]
+      },
+      {
+       "title": "Guest ratings",
+       "kind": "ratings",
+       "items": [
+        {
+         "label": "Platform A",
+         "rating": 3.6,
+         "count": 20,
+         "url": "https://stays.platform-a.test/p08"
+        },
+        {
+         "label": "Platform B",
+         "rating": 3.7,
+         "count": 20,
+         "url": "https://reviews.platform-b.test/p08"
+        }
+       ]
+      },
+      {
+       "title": "Guest reviews",
+       "not_found": "the reviews are in the stored review files"
+      },
+      {
+       "title": "Photos",
+       "not_found": "synthetic example: no photos"
+      }
+     ],
+     "score_basis": {
+      "method": "read-reviews",
+      "formula": "rank-score-v2",
+      "rubric": "Weighted mean of the stars on the reviews read (Platform A 1.5, Platform B 1.0), plus overlays.",
+      "guest_score": 3.6,
+      "sources": [
+       {
+        "name": "Platform A reviews",
+        "url": "https://stays.platform-a.test/p08",
+        "read": 20,
+        "reviews_file": "reviews/p08.a.json"
+       },
+       {
+        "name": "Platform B reviews",
+        "url": "https://reviews.platform-b.test/p08",
+        "read": 20,
+        "reviews_file": "reviews/p08.b.json"
+       },
+       {
+        "name": "web research",
+        "url": "https://climate.example.test/p08",
+        "read_at": "2030-05-04"
+       }
+      ],
+      "themes": [
+       {
+        "text": "calm, clean stays",
+        "review_ids": [
+         "a0",
+         "b0"
+        ]
+       }
+      ],
+      "concerns": [],
+      "group_fit": [
+       {
+        "signal": "games",
+        "criterion": "on_site_games",
+        "bump": 0.5,
+        "fact": {
+         "facts": 2
+        },
+        "reason": "something to do on site"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "id": "all",
+   "title": "Everything compared",
+   "cards": "ranked",
+   "columns": [
+    {
+     "key": "rank",
+     "label": "Rank",
+     "type": "num"
+    },
+    {
+     "key": "name",
+     "label": "Name",
+     "type": "text",
+     "link": true
+    },
+    {
+     "key": "price",
+     "label": "Price (EUR)",
+     "type": "num"
+    },
+    {
+     "key": "score",
+     "label": "Rank score",
+     "type": "num"
+    },
+    {
+     "key": "drive",
+     "label": "Drive (min)",
+     "type": "num"
+    }
+   ],
+   "items": [
+    {
+     "name": "Juniper Ridge Retreat",
+     "id": "p04",
+     "rank": 1,
+     "price": 610.0,
+     "score": 5.0,
+     "url": "https://stays.platform-a.test/p04",
+     "drive": 78
+    },
+    {
+     "name": "Alder Cove Cottage",
+     "id": "p09",
+     "rank": 2,
+     "price": 480.0,
+     "score": 4.9,
+     "url": "https://stays.platform-a.test/p09",
+     "drive": 55
+    },
+    {
+     "name": "Larkspur Lakehouse",
+     "id": "p01",
+     "rank": 3,
+     "price": 540.0,
+     "score": 4.7,
+     "url": "https://stays.platform-a.test/p01",
+     "drive": 52
+    },
+    {
+     "name": "Tarrant Glen Farm",
+     "id": "p12",
+     "rank": 4,
+     "price": 515.0,
+     "score": 4.7,
+     "url": "https://stays.platform-a.test/p12",
+     "drive": 66,
+     "unavailable": true
+    },
+    {
+     "name": "Kestrel Orchard House",
+     "id": "p07",
+     "rank": 5,
+     "price": 500.0,
+     "score": 4.3,
+     "url": "https://stays.platform-a.test/p07",
+     "drive": 35
+    },
+    {
+     "name": "Willow Brook Farm",
+     "id": "p02",
+     "rank": 6,
+     "price": 460.0,
+     "score": 4.3,
+     "url": "https://stays.platform-a.test/p02",
+     "drive": 61
+    },
+    {
+     "name": "Amber Hollow Lodge",
+     "id": "p03",
+     "rank": 7,
+     "price": 455.0,
+     "score": 4.1,
+     "url": "https://stays.platform-a.test/p03",
+     "drive": 44
+    },
+    {
+     "name": "Redmere Brook House",
+     "id": "p10",
+     "rank": 8,
+     "price": 445.0,
+     "score": 4.1,
+     "url": "https://stays.platform-a.test/p10",
+     "drive": 63
+    },
+    {
+     "name": "Hollis Grove Stay",
+     "id": "p06",
+     "rank": 9,
+     "price": 430.0,
+     "score": 4.0,
+     "url": "https://stays.platform-a.test/p06",
+     "drive": 75
+    },
+    {
+     "name": "Stonecroft Roadside Lodge",
+     "id": "p11",
+     "rank": 10,
+     "price": 330.0,
+     "score": 4.0,
+     "url": "https://stays.platform-a.test/p11",
+     "drive": 41
+    },
+    {
+     "name": "Corvin Meadow Villa",
+     "id": "p05",
+     "rank": 11,
+     "price": 365.0,
+     "score": 3.8,
+     "url": "https://stays.platform-a.test/p05",
+     "drive": 38
+    },
+    {
+     "name": "Merrow Stone Cottage",
+     "id": "p08",
+     "rank": 12,
+     "price": 340.0,
+     "score": 4.1,
+     "url": "https://stays.platform-a.test/p08",
+     "drive": 70
+    }
+   ]
+  },
+  {
+   "type": "method",
+   "id": "method",
+   "title": "How this was checked",
+   "items": [
+    "Each figure was read from the listing or a Maps measurement.",
+    "Reviews were read in full and stored."
+   ]
+  }
+ ],
+ "footer": "Synthetic stays for calibration. Not a real report.",
+ "design": {
+  "brand": "Valmora Stays (example)",
+  "ethos": "A calm, plain-spoken stay guide: three inns, the numbers behind each rating, and nothing sold harder than the evidence allows.",
+  "fonts": {
+   "display": "Fraunces",
+   "body": "Plus Jakarta Sans"
+  },
+  "palette": {
+   "bg": "#f5f3ee",
+   "surface": "#ffffff",
+   "ink": "#1c1f24",
+   "mute": "#555b66",
+   "line": "#e0ddd4",
+   "accent": "#9a3b2b",
+   "accent_ink": "#ffffff",
+   "chip": "#ece9e1",
+   "good": "#1f6b45",
+   "warn": "#8a5300",
+   "bad": "#a52a2a",
+   "eyebrow": "#f2d6a2",
+   "on_image": "#ffffff",
+   "image_overlay": "#1b1d22"
+  },
+  "palette_dark": {
+   "bg": "#121417",
+   "surface": "#1b1e23",
+   "ink": "#eceef1",
+   "mute": "#a7adb8",
+   "line": "#343842",
+   "accent": "#f0877a",
+   "accent_ink": "#121417",
+   "chip": "#262a31",
+   "good": "#5fd39a",
+   "warn": "#f0b04a",
+   "bad": "#ff8c8c",
+   "eyebrow": "#f2d6a2",
+   "on_image": "#ffffff",
+   "image_overlay": "#0c0d10"
+  }
+ }
+}

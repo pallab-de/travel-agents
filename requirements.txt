@@ -1,0 +1,5 @@
+# Every skill's scripts use only the Python standard library (json, re, urllib, difflib, math, argparse)
+# EXCEPT: image tiering (Pillow, to resize/re-encode photos before embedding them in the report) and
+# the encrypted-secrets store (cryptography, for Fernet symmetric encryption of the .env file).
+Pillow>=10.0
+cryptography>=42.0

@@ -1,0 +1,147 @@
+{
+ "method": "apify-booking-reviews",
+ "retrieved_at": "2030-05-06T00:00:00Z",
+ "note": "synthetic example data",
+ "reviews": [
+  {
+   "id": "a0",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Peaceful, easy to unwind here (guest 1 of 20, platform A).",
+   "sha256": "bc3f79a8d9150d98981a26fba287a06165d8c2bbf3d5257c5f01334c526e9960"
+  },
+  {
+   "id": "a1",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The road outside is loud at night and the windows let it in (guest 2 of 20, platform A).",
+   "sha256": "512758815bd84219280a496d5525146659d22de13f4139845f2a5de4dd2b081b"
+  },
+  {
+   "id": "a2",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Beautiful setting and very clean (guest 3 of 20, platform A).",
+   "sha256": "5aa6db88f217591a89f91d6699fa3a81cc3a20624e6e311130bbee217674c791"
+  },
+  {
+   "id": "a3",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The caretaker was very helpful with everything (guest 4 of 20, platform A).",
+   "sha256": "5b32f17b13894409930781966b64b9a7b43c760beabf29dcb7c4a72a0b7e539e"
+  },
+  {
+   "id": "a4",
+   "stars": 5,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The road outside is loud at night and the windows let it in (guest 5 of 20, platform A).",
+   "sha256": "89ca4d2bb1a88fa509293e7a8f6378179571c1ecc93563050e7d4c4ddfb886c3"
+  },
+  {
+   "id": "a5",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Peaceful, easy to unwind here (guest 6 of 20, platform A).",
+   "sha256": "2fe07883a9cb6f3d522ec9973047871e2066d9c712a8046c90b52bf1c5dbc2e4"
+  },
+  {
+   "id": "a6",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Peaceful, easy to unwind here (guest 7 of 20, platform A).",
+   "sha256": "8ca55bdbaf5ac2e9550924eee2fe53931527d76cb2246ca8dd51cb0fa085cf9b"
+  },
+  {
+   "id": "a7",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The road outside is loud at night and the windows let it in (guest 8 of 20, platform A).",
+   "sha256": "99cc08facb67348057f1658097a68bc134ed292ab118bd4c37a47ec0cf9381ee"
+  },
+  {
+   "id": "a8",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The caretaker was very helpful with everything (guest 9 of 20, platform A).",
+   "sha256": "7ccd9a98e8f3b44f9ec7a06ccc04fccd6aa7bef97404d877e782a182f0ff13db"
+  },
+  {
+   "id": "a9",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The road outside is loud at night and the windows let it in (guest 10 of 20, platform A).",
+   "sha256": "d74a0c5db157af64016ab51ed047b8ce753c0c4e0c940f4a5ee0e64bf7ecb83c"
+  },
+  {
+   "id": "a10",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Spotless rooms and a lovely terrace (guest 11 of 20, platform A).",
+   "sha256": "ade9ec02e0e1941a60b738780f45a219ae64a67afc209aa65725981e81ca07f5"
+  },
+  {
+   "id": "a11",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Peaceful, easy to unwind here (guest 12 of 20, platform A).",
+   "sha256": "1de8a3c236f89a597adc2e6e4b5b64207b2f8a46cf4617b7e5fda4f0a37ef06d"
+  },
+  {
+   "id": "a12",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The road outside is loud at night and the windows let it in (guest 13 of 20, platform A).",
+   "sha256": "af259f2686c60fa4ff7a0bb635dd8f6ab25f087ffde008ce29bc11ca34876aba"
+  },
+  {
+   "id": "a13",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The caretaker was very helpful with everything (guest 14 of 20, platform A).",
+   "sha256": "44853662b09fef70497c810331601e1c57f20a348d859fa0cc814b6a3e19dafd"
+  },
+  {
+   "id": "a14",
+   "stars": 4,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Spotless rooms and a lovely terrace (guest 15 of 20, platform A).",
+   "sha256": "1f1b5ea23fed6e7914666bcd5ce1fe4911b38195bed32792c531188d8baf0c55"
+  },
+  {
+   "id": "a15",
+   "stars": 3,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Check-in was slower than we expected (guest 16 of 20, platform A).",
+   "sha256": "aeaf2f404f3d91a6c68f4bfeb3d485a756d6f80481e9e1bcdfc9ca9f1ffad740"
+  },
+  {
+   "id": "a16",
+   "stars": 3,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The wifi dropped twice during our stay (guest 17 of 20, platform A).",
+   "sha256": "d3bf270c727da19d4e762841fc1be8190ffcaae3b1e887e435440c72e545ebab"
+  },
+  {
+   "id": "a17",
+   "stars": 3,
+   "when": "2030-04-01",
+   "text": "[synthetic a] Hot water took a while to arrive (guest 18 of 20, platform A).",
+   "sha256": "43267c860a1ff252caca3cdadad9a8dca4fe340e9739ead5e23b825e53c48b0a"
+  },
+  {
+   "id": "a18",
+   "stars": 3,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The wifi dropped twice during our stay (guest 19 of 20, platform A).",
+   "sha256": "b797acc38fe413274a5e3fa6c2787612288ca5720a1856115fe2911e7970bcb0"
+  },
+  {
+   "id": "a19",
+   "stars": 3,
+   "when": "2030-04-01",
+   "text": "[synthetic a] The wifi dropped twice during our stay (guest 20 of 20, platform A).",
+   "sha256": "886fab75ad0b0a6d804a0ac414408d9a88c141a14b5a789817f3dacbb8aed593"
+  }
+ ]
+}

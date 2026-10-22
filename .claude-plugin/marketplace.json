@@ -1,0 +1,14 @@
+{
+  "name": "travel-agents-marketplace",
+  "description": "Agents for cited, checked travel research: stay search, multi-city trips, and one entry point for both, sharing one pool of skills and tools.",
+  "owner": {
+    "name": "pallab-de"
+  },
+  "plugins": [
+    {
+      "name": "travel-agents",
+      "source": ".",
+      "description": "travel-agent (the single trip entry point), staycation-finder and vacation-planner, plus the shared skills (fact-guard, report-builder) and the tools/ layer."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "method": "google-places-api",
+  "retrieved_at": "2030-05-06T00:00:00Z",
+  "note": "synthetic example data",
+  "reviews": [
+    {
+      "id": "g0",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Breakfast room is calm and well run each morning (guest 1 of 20).",
+      "sha256": "436d225a3e1f5871862f7557741140b24b2731dd130c5a21ebd3cc0508d8d5c6"
+    },
+    {
+      "id": "g1",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Mattress felt worn after a year of use here (guest 2 of 20).",
+      "sha256": "4073b28433d750f3142b6b17a52420dc77e35f69041763b5c8437ecd02ebcf35"
+    },
+    {
+      "id": "g2",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Good value for the money overall (guest 3 of 20).",
+      "sha256": "f34cdebf0e4258780c84376a34fd0fd93d5c0dcff49cc1deda2abaf5425e27e3"
+    },
+    {
+      "id": "g3",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] The lift is slow but the stairs are fine (guest 4 of 20).",
+      "sha256": "661c16dc96f146351f311bc8043a1906cef43197a2a045705732f6393d802d72"
+    },
+    {
+      "id": "g4",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Rooms are clean though the bathrooms are small (guest 5 of 20).",
+      "sha256": "9751b923941bfb4d69197b7aa2c83aaa935ce13f0fa88bd278c4af966031c745"
+    },
+    {
+      "id": "g5",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Street noise carries until late in the evening (guest 6 of 20).",
+      "sha256": "236b854321d30162bd1c8a58ed5b1ebf20f05e0f657946418fc701ed1acfc97b"
+    },
+    {
+      "id": "g6",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Breakfast room is calm and well run each morning (guest 7 of 20).",
+      "sha256": "ba2d56d410f41054e98e12e1cd441c2530253423e2eeb18167a99d327fe8c1ae"
+    },
+    {
+      "id": "g7",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Mattress felt worn after a year of use here (guest 8 of 20).",
+      "sha256": "1be97938af611ff096ed7181420321c29a424fd33908f85ccab5caf878800281"
+    },
+    {
+      "id": "g8",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Good value for the money overall (guest 9 of 20).",
+      "sha256": "71272be7ab01e7c3f6778b0a7ed81be0a8fc8806d6d0c0549c730d6c4cce1f52"
+    },
+    {
+      "id": "g9",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] The lift is slow but the stairs are fine (guest 10 of 20).",
+      "sha256": "8127ceac6549d0b409270010c174c3ffa9c3d423d259fb60402788f2414541c1"
+    },
+    {
+      "id": "g10",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Rooms are clean though the bathrooms are small (guest 11 of 20).",
+      "sha256": "4497975aa9b64e3b9fb8db71af3df0b6d792be3870e8856a4a52e8fb4d482baa"
+    },
+    {
+      "id": "g11",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Street noise carries until late in the evening (guest 12 of 20).",
+      "sha256": "dba2e1b3819d0cbbe932ef798f6283fb94c12311239fdd3f781ba12d738a221b"
+    },
+    {
+      "id": "g12",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Breakfast room is calm and well run each morning (guest 13 of 20).",
+      "sha256": "11e81fa7fd5f9e96e1145e6c60cffadd1b9de1f7bb163205af8237512bf7e5bc"
+    },
+    {
+      "id": "g13",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Mattress felt worn after a year of use here (guest 14 of 20).",
+      "sha256": "57d975c2aed3aad880d5252f42ba821641196df80b3376c3f3aabf424934adac"
+    },
+    {
+      "id": "g14",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Good value for the money overall (guest 15 of 20).",
+      "sha256": "3a7a271b89ab86fb8af23192b8de02616836a86f36fc52af106ad18ac9bd48fb"
+    },
+    {
+      "id": "g15",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] The lift is slow but the stairs are fine (guest 16 of 20).",
+      "sha256": "ad326575c9dcf579b7cd707eafe41953c146ad4bb5a02776b3ed08de1177b4b5"
+    },
+    {
+      "id": "g16",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Rooms are clean though the bathrooms are small (guest 17 of 20).",
+      "sha256": "b9fdaba145a56587e4f03d77d7b8f8a69c3bf452724697c502783513bd53c6fd"
+    },
+    {
+      "id": "g17",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Street noise carries until late in the evening (guest 18 of 20).",
+      "sha256": "e95efebcf843e356ca35327360cfb1731a7232f04e3ca853f7e08ef849d87b18"
+    },
+    {
+      "id": "g18",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Breakfast room is calm and well run each morning (guest 19 of 20).",
+      "sha256": "2e14277e10977480d69e516236d81861842690fcfc7dbf6c72ccc7bbf59ab7ac"
+    },
+    {
+      "id": "g19",
+      "stars": 2,
+      "when": "2030-04-01",
+      "text": "[synthetic] Mattress felt worn after a year of use here (guest 20 of 20).",
+      "sha256": "cd86ed201598811010fa16999ee0565e07f5d5ab5048e8ee49ac22926ac43ab3"
+    }
+  ]
+}

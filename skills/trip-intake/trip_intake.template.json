@@ -1,0 +1,89 @@
+{
+  "_comment": "Copy this into the project's own working folder as trip_intake.json, then fill it in from the user's answers. travel-agent writes this once, before any downstream skill runs; requirements-intake and trip-constraints-intake read it instead of re-asking what's already here. scripts/trip_intake.py validate must pass before research starts; this blank template fails it on purpose.",
+  "shape": "",
+  "_shape_options": [
+    "stay",
+    "itinerary",
+    "mixed"
+  ],
+  "destination": {
+    "home_base": "",
+    "stay_area": "",
+    "route": [],
+    "_note": "home_base: where they start from. stay_area: the city or area to stay in (a staycation can repeat the home area). route: the ordered places of an itinerary or mixed trip."
+  },
+  "dates": {
+    "start": "",
+    "end": "",
+    "flexible": false,
+    "window": {
+      "earliest": "",
+      "latest": "",
+      "nights": 0
+    },
+    "avoid_windows": [],
+    "_note": "Exact dates fill start and end. If the dates are not decided, set flexible true and fill window (earliest, latest, nights)."
+  },
+  "group": {
+    "adults": 0,
+    "children": [],
+    "pets": [],
+    "_note": "children: [{\"age\": 3}]; pets: [{\"species\": \"dog\", \"weight_kg\": 12}]. Leave a list empty if there are none."
+  },
+  "group_profile": {
+    "traits": [],
+    "traits_confirmed": false,
+    "_trait_examples": [
+      "wants_nightlife",
+      "needs_kids_play_area",
+      "wants_unique_view",
+      "wants_quiet",
+      "mobility_limited",
+      "foodie",
+      "budget_conscious_splurge_ok_occasionally"
+    ],
+    "notes": "Free text, in the user's own words. Read the trait list back to the user; set traits_confirmed to true only once they've agreed it. Ranking bumps may only answer confirmed traits (or a universal signal like a unique view)."
+  },
+  "fit_profile": {
+    "criteria": [],
+    "confirmed": false,
+    "_criterion_shape": {
+      "id": "near_sights",
+      "why": "only one day in town, out from morning to night",
+      "weight": 0.5,
+      "polarity": "+",
+      "evidence": "maps"
+    },
+    "_note": "What makes a place rank higher (+) or lower (-) for THIS trip, agreed with the user (SKILL.md step 3). weight: at most 0.5. evidence: 'maps' for anything about distance or walkability, else 'fact'. Set confirmed to true only after the user has seen and confirmed the list."
+  },
+  "context": {
+    "trip_nature": "",
+    "pace": "",
+    "time_in_place": "",
+    "splurge": "",
+    "stay_style": [],
+    "affinities": ""
+  },
+  "budget": {
+    "amount": 0,
+    "currency": "",
+    "period": ""
+  },
+  "_period_options": [
+    "total",
+    "per_night",
+    "per_day"
+  ],
+  "created_at": "",
+  "itinerary": {
+    "route_reason": "",
+    "group_limits": "",
+    "stay_accessible": "",
+    "mode_order": [],
+    "budget_shape": "",
+    "meal_coverage": "",
+    "payment_preference": "",
+    "loyalty": [],
+    "_note": "Itinerary and mixed trips only (trip-constraints-intake). stay_accessible: yes, no or not_applicable. payment_preference: cash, points or compare. loyalty: [{programme, points}]."
+  }
+}

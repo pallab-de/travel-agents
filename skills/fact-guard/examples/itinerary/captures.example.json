@@ -1,0 +1,258 @@
+[
+  {
+    "row": "stays:Aster Inn|url",
+    "url": "https://stays.example-hotels.test/aster",
+    "value": "https://stays.example-hotels.test/aster",
+    "raw": "link https://stays.example-hotels.test/aster",
+    "http_status": 200
+  },
+  {
+    "row": "stays:Aster Inn|url",
+    "url": "https://stays.example-hotels.test/aster",
+    "value": "https://stays.example-hotels.test/aster",
+    "raw": "link https://stays.example-hotels.test/aster",
+    "http_status": 200
+  },
+  {
+    "row": "stays:Aster Inn|price",
+    "url": "https://stays.example-hotels.test/aster",
+    "value": "EUR 289.0",
+    "raw": "price EUR 289.0"
+  },
+  {
+    "row": "stays:Aster Inn|price",
+    "url": "https://stays.example-hotels.test/aster",
+    "value": "EUR 289.0",
+    "raw": "price EUR 289.0"
+  },
+  {
+    "row": "stays:Birch Inn|url",
+    "url": "https://stays.example-hotels.test/birch",
+    "value": "https://stays.example-hotels.test/birch",
+    "raw": "link https://stays.example-hotels.test/birch",
+    "http_status": 200
+  },
+  {
+    "row": "stays:Birch Inn|url",
+    "url": "https://stays.example-hotels.test/birch",
+    "value": "https://stays.example-hotels.test/birch",
+    "raw": "link https://stays.example-hotels.test/birch",
+    "http_status": 200
+  },
+  {
+    "row": "stays:Birch Inn|price",
+    "url": "https://stays.example-hotels.test/birch",
+    "value": "EUR 199.0",
+    "raw": "price EUR 199.0"
+  },
+  {
+    "row": "stays:Birch Inn|price",
+    "url": "https://stays.example-hotels.test/birch",
+    "value": "EUR 199.0",
+    "raw": "price EUR 199.0"
+  },
+  {
+    "row": "legs:Valmora to Selmere:rail|segment0:Taxi to the station",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "15 min",
+    "raw": "duration 15 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:rail|segment0:Taxi to the station",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "15 min",
+    "raw": "duration 15 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:rail|segment1:Train",
+    "url": "https://rail.example-travel.test/valmora-selmere",
+    "value": "120 min",
+    "raw": "duration 120 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:rail|segment1:Train",
+    "url": "https://tickets.example-trains.test/valmora-selmere",
+    "value": "120 min",
+    "raw": "duration 120 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:rail|segment2:Walk to the hotel",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "10 min",
+    "raw": "duration 10 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:rail|segment2:Walk to the hotel",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "10 min",
+    "raw": "duration 10 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:road|time_minutes",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "165 min",
+    "raw": "duration 165 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:road|time_minutes",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "165 min",
+    "raw": "duration 165 min"
+  },
+  {
+    "row": "legs:Valmora to Selmere:road|distance_km",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "190",
+    "raw": "km 190"
+  },
+  {
+    "row": "legs:Valmora to Selmere:road|distance_km",
+    "url": "https://maps.example-travel.test/route/valmora-selmere",
+    "value": "190",
+    "raw": "km 190"
+  },
+  {
+    "row": "plan:2030-05-06:3:Dinner at Salt House|time",
+    "url": "https://www.salt-house.example.test/reserve",
+    "value": "19:30",
+    "raw": "time 19:30"
+  },
+  {
+    "row": "plan:2030-05-06:3:Dinner at Salt House|time",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "19:30",
+    "raw": "time 19:30"
+  },
+  {
+    "row": "plan:2030-05-07:1:Train to Selmere|time",
+    "url": "https://rail.example-travel.test/valmora-selmere",
+    "value": "09:10",
+    "raw": "time 09:10"
+  },
+  {
+    "row": "plan:2030-05-07:1:Train to Selmere|time",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "09:10",
+    "raw": "time 09:10"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|amount",
+    "url": "https://www.valmora-harbour.example.test/booking",
+    "value": "150 EUR",
+    "raw": "booking 150 (EUR)"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|amount",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "150 EUR",
+    "raw": "booking 150 (EUR)"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|cancel_by",
+    "url": "https://www.valmora-harbour.example.test/booking",
+    "value": "2030-05-04",
+    "raw": "date 2030-05-04"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|cancel_by",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "2030-05-04",
+    "raw": "date 2030-05-04"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|check_in",
+    "url": "https://www.valmora-harbour.example.test/booking",
+    "value": "2030-05-06",
+    "raw": "date 2030-05-06"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|check_in",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "2030-05-06",
+    "raw": "date 2030-05-06"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|check_out",
+    "url": "https://www.valmora-harbour.example.test/booking",
+    "value": "2030-05-07",
+    "raw": "date 2030-05-07"
+  },
+  {
+    "row": "bookings:Valmora Harbour Hotel|check_out",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "2030-05-07",
+    "raw": "date 2030-05-07"
+  },
+  {
+    "row": "bookings:Selmere Grand|amount",
+    "url": "https://www.selmere-grand.example.test/booking",
+    "value": "180 EUR",
+    "raw": "booking 180 (EUR)"
+  },
+  {
+    "row": "bookings:Selmere Grand|amount",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "180 EUR",
+    "raw": "booking 180 (EUR)"
+  },
+  {
+    "row": "bookings:Selmere Grand|cancel_by",
+    "url": "https://www.selmere-grand.example.test/booking",
+    "value": "2030-05-05",
+    "raw": "date 2030-05-05"
+  },
+  {
+    "row": "bookings:Selmere Grand|cancel_by",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "2030-05-05",
+    "raw": "date 2030-05-05"
+  },
+  {
+    "row": "bookings:Selmere Grand|check_in",
+    "url": "https://www.selmere-grand.example.test/booking",
+    "value": "2030-05-07",
+    "raw": "date 2030-05-07"
+  },
+  {
+    "row": "bookings:Selmere Grand|check_in",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "2030-05-07",
+    "raw": "date 2030-05-07"
+  },
+  {
+    "row": "bookings:Selmere Grand|check_out",
+    "url": "https://www.selmere-grand.example.test/booking",
+    "value": "2030-05-08",
+    "raw": "date 2030-05-08"
+  },
+  {
+    "row": "bookings:Selmere Grand|check_out",
+    "url": "evidence/booking-confirmation.txt",
+    "value": "2030-05-08",
+    "raw": "date 2030-05-08"
+  },
+  {
+    "row": "fares:Advance fare|cash",
+    "url": "https://rail.example-travel.test/valmora-selmere",
+    "value": "38 EUR",
+    "raw": "price 38 (EUR)"
+  },
+  {
+    "row": "fares:Advance fare|cash",
+    "url": "https://rail.example-travel.test/valmora-selmere",
+    "value": "38 EUR",
+    "raw": "price 38 (EUR)"
+  },
+  {
+    "row": "fares:Flexible fare|cash",
+    "url": "https://rail.example-travel.test/valmora-selmere",
+    "value": "62 EUR",
+    "raw": "price 62 (EUR)"
+  },
+  {
+    "row": "fares:Flexible fare|cash",
+    "url": "https://rail.example-travel.test/valmora-selmere",
+    "value": "62 EUR",
+    "raw": "price 62 (EUR)"
+  }
+]

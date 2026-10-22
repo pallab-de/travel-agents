@@ -1,0 +1,125 @@
+{
+ "domain": "stay",
+ "defects": [
+  {
+   "cell": "dce4a944cc672e86",
+   "code": "dae3df286c9af22d",
+   "tier": "subtle",
+   "klass": "price",
+   "code_family": "C",
+   "parents": []
+  },
+  {
+   "cell": "d3bd9c420aa95ea6",
+   "code": "6015eb7283b4e88d",
+   "tier": "subtle",
+   "klass": "count",
+   "code_family": "C",
+   "parents": []
+  },
+  {
+   "cell": "db391a395d70dc7b",
+   "code": "bbf0850f30e244dc",
+   "tier": "subtle",
+   "klass": "number",
+   "code_family": "C",
+   "parents": []
+  },
+  {
+   "cell": "2b1b7b2a99f620ec",
+   "code": "20a3a8b6b374dc3b",
+   "tier": "easy",
+   "klass": "number",
+   "code_family": "C",
+   "parents": []
+  },
+  {
+   "cell": "52c911d8fdfdb1aa",
+   "code": "cc6a6a57722f483f",
+   "tier": "subtle",
+   "klass": "source_label",
+   "code_family": "C",
+   "parents": [
+    "2b1b7b2a99f620ec"
+   ]
+  },
+  {
+   "cell": "691f500dfd1b6f48",
+   "code": "4d24c1dd9ae7ce78",
+   "tier": "subtle",
+   "klass": "stale",
+   "code_family": "C",
+   "parents": []
+  },
+  {
+   "cell": "035a943ed25a08fe",
+   "code": "9c59fb784cf6afea",
+   "tier": "subtle",
+   "klass": "overlay",
+   "code_family": "L",
+   "parents": []
+  },
+  {
+   "cell": "30a5b3c305b81565",
+   "code": "3ea5e747fe3c7aa4",
+   "tier": "subtle",
+   "klass": "verdict",
+   "code_family": "L",
+   "parents": [
+    "691f500dfd1b6f48"
+   ]
+  },
+  {
+   "cell": "5d96354c76528e33",
+   "code": "68057a1ccd3908be",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "dce4a944cc672e86"
+   ]
+  },
+  {
+   "cell": "a1b52a05660cc2a5",
+   "code": "ad6d28da323def5d",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "db391a395d70dc7b"
+   ]
+  },
+  {
+   "cell": "b8d067a299f46a8b",
+   "code": "453a0103209b203a",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "d3bd9c420aa95ea6"
+   ]
+  },
+  {
+   "cell": "4fa5440dac3bccc6",
+   "code": "0a131214464bdc04",
+   "tier": "subtle",
+   "klass": "buried",
+   "code_family": "L",
+   "parents": []
+  },
+  {
+   "cell": "a71300b2334811fd",
+   "code": "f6ad5b49eddb685e",
+   "tier": "easy",
+   "klass": "overlay",
+   "code_family": "L",
+   "parents": []
+  }
+ ],
+ "decoys": [
+  "1d73eb0cef13392b",
+  "5e115856ddf396d2",
+  "e7cfc53d7d5bac93",
+  "34d0d2b69db31874"
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "question": "Which of three inns is the best stay for a weekend in Valmora?",
+  "audience": "A traveller choosing one inn for a weekend away",
+  "decision": "Book one of the three, or none",
+  "criteria": [
+    {
+      "name": "Guest rating",
+      "why": "Reflects how other guests found the stay",
+      "how_checked": "The reviews read for each inn, averaged"
+    },
+    {
+      "name": "Price per night",
+      "why": "Budget limit",
+      "how_checked": "Two captures of the inn page per inn"
+    }
+  ],
+  "out_of_scope": [
+    "Transport to the inn",
+    "Cancellation terms"
+  ],
+  "assumptions": [
+    "Prices are nightly rates in EUR for a double room"
+  ]
+}

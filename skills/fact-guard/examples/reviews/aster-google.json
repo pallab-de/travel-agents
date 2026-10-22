@@ -1,0 +1,147 @@
+{
+  "method": "google-places-api",
+  "retrieved_at": "2030-05-06T00:00:00Z",
+  "note": "synthetic example data",
+  "reviews": [
+    {
+      "id": "g0",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Quiet room and a very comfortable bed after a long day (guest 1 of 20).",
+      "sha256": "6d74b45e1104dd5aefb75b1e29c66d35de14d3b76d3a6147976fb7233ba392a6"
+    },
+    {
+      "id": "g1",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Walls are thin and the corridor is noisy at night (guest 2 of 20).",
+      "sha256": "b6207f389b28c3ca3a08f2aa9b0e1adaaae7f9a8aacd7f80ca62bf3aff774e75"
+    },
+    {
+      "id": "g2",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Good building, check-in took twenty minutes (guest 3 of 20).",
+      "sha256": "9a853b24eadb0262b92899c2197e24241c441684e01b0203745c8f678a19c339"
+    },
+    {
+      "id": "g3",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Garden-facing rooms are calm and well kept (guest 4 of 20).",
+      "sha256": "f9e18924a4f94ae9fa2460325c95dabeac3def518d526a34fbab8cd1edda767b"
+    },
+    {
+      "id": "g4",
+      "stars": 5,
+      "when": "2030-04-01",
+      "text": "[synthetic] Breakfast is simple but the coffee is excellent (guest 5 of 20).",
+      "sha256": "e425039e1b118c55049753c882e1270a52207269a39a01c78d1d99af2284bbda"
+    },
+    {
+      "id": "g5",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Staff were helpful about early luggage drop (guest 6 of 20).",
+      "sha256": "1a7e8e6d7f2142bcd92b6cc51dbcd13d80c170381954ebbe39b150da4f9e897d"
+    },
+    {
+      "id": "g6",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Quiet room and a very comfortable bed after a long day (guest 7 of 20).",
+      "sha256": "ca367ab5e022883493ebf576aa04b2e6c97aee1a8ecd5f4eaaba9d318f26a967"
+    },
+    {
+      "id": "g7",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Walls are thin and the corridor is noisy at night (guest 8 of 20).",
+      "sha256": "54c278afe530aa19569fb3a0d27641ea5fa2bd0fc3c0b5ba59c32f9a21004e4f"
+    },
+    {
+      "id": "g8",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Good building, check-in took twenty minutes (guest 9 of 20).",
+      "sha256": "722e729ea8891bd03e5fc6324dbf76e2e89925ca252a79ed5f366cf5f9c5db2d"
+    },
+    {
+      "id": "g9",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Garden-facing rooms are calm and well kept (guest 10 of 20).",
+      "sha256": "5021f6a9e44b0c63e81040e24fa6879bca8f30748d82067a6a4a83fe2a160aa9"
+    },
+    {
+      "id": "g10",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Breakfast is simple but the coffee is excellent (guest 11 of 20).",
+      "sha256": "bc4c189ab2e1378bf6ee1aff8ab43fbeab096401fdd49857e07837d3932d189b"
+    },
+    {
+      "id": "g11",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Staff were helpful about early luggage drop (guest 12 of 20).",
+      "sha256": "a1e78ea098ac1665c098d5a37f1c463f2defd863fc7226e616331cb308f71dfa"
+    },
+    {
+      "id": "g12",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Quiet room and a very comfortable bed after a long day (guest 13 of 20).",
+      "sha256": "57da83c93c8deb8e05a0fb550ef8d20953a2d8fdfabd0e7f6d71fb7f09541dd9"
+    },
+    {
+      "id": "g13",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Walls are thin and the corridor is noisy at night (guest 14 of 20).",
+      "sha256": "5fe7f78b763a9089d36da5504eb05338cd81991db0c0b4c4dbd02ad3bdb58912"
+    },
+    {
+      "id": "g14",
+      "stars": 4,
+      "when": "2030-04-01",
+      "text": "[synthetic] Good building, check-in took twenty minutes (guest 15 of 20).",
+      "sha256": "d97548a7e0c7a27b2a06d676788ba0537feaf1363edeb2c7b4ee5ce226f65804"
+    },
+    {
+      "id": "g15",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Garden-facing rooms are calm and well kept (guest 16 of 20).",
+      "sha256": "608f17e45ca05e8f1732196ef63706f56fcda51e3206ba857f5a8809a0f5ec63"
+    },
+    {
+      "id": "g16",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Breakfast is simple but the coffee is excellent (guest 17 of 20).",
+      "sha256": "32ba3c513b17a2eacf12dc1f0019ab29e94de4ab8b8db81cf6750673363fd389"
+    },
+    {
+      "id": "g17",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Staff were helpful about early luggage drop (guest 18 of 20).",
+      "sha256": "dc870dc14ae85c015b988d46b4d18072d30101b946fc27939ee658787b1e0fcc"
+    },
+    {
+      "id": "g18",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Quiet room and a very comfortable bed after a long day (guest 19 of 20).",
+      "sha256": "e4781ace40e7eb15f5038c653a439643ed707cdcf92c5a20a4adab391bc2c3cd"
+    },
+    {
+      "id": "g19",
+      "stars": 3,
+      "when": "2030-04-01",
+      "text": "[synthetic] Walls are thin and the corridor is noisy at night (guest 20 of 20).",
+      "sha256": "8ab7874f84fdbe97a15a2576b21a9a52cee4bf2ea30a0ab90de114ffcccfda66"
+    }
+  ]
+}

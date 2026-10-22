@@ -1,0 +1,43 @@
+# --- Secrets and credentials: never publish ---
+secrets/
+.env
+.env.*
+!skills/environment-setup/scripts/.env.template
+*.enc
+*.key
+*.pem
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Browser / MCP scratch ---
+.playwright-mcp/
+
+# --- Per-project generated output (written into the CALLING trip folder, guarded here in case a dev runs scripts from the plugin root) ---
+img/
+*.log
+/*.json
+/raw/
+/reviews/
+/synthesis/
+/captures/
+/plans/
+/kb*/
+/review/
+/evidence/
+/*.html
+_assets/
+hero.*
+/RESEARCH.md
+
+# --- Third-party scraped or cached data: never publish ---
+test-runs/
+gp_cache.json
+
+# --- OS junk ---
+Thumbs.db
+Desktop.ini
+.DS_Store

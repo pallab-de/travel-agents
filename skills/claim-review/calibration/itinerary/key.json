@@ -1,0 +1,190 @@
+{
+ "domain": "itinerary",
+ "defects": [
+  {
+   "cell": "7dfdd7c8720ebaa2",
+   "code": "12458d13d38392ed",
+   "tier": "easy",
+   "klass": "date",
+   "code_family": "C",
+   "parents": [
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "0a7e183d1db6eef7",
+   "code": "9ede51c6fb5776f8",
+   "tier": "easy",
+   "klass": "sum",
+   "code_family": "C",
+   "parents": []
+  },
+  {
+   "cell": "f09b4ef60eb6f269",
+   "code": "77300848dc42d75e",
+   "tier": "subtle",
+   "klass": "status",
+   "code_family": "C",
+   "parents": [
+    "777588a9b908db8c"
+   ]
+  },
+  {
+   "cell": "fbc479f42e51748a",
+   "code": "fda1da301cdc3057",
+   "tier": "subtle",
+   "klass": "name",
+   "code_family": "C",
+   "parents": [
+    "1947db0151ab0b71",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "f80b4cfe348d5dbc",
+   "code": "63e11f631ff4205f",
+   "tier": "subtle",
+   "klass": "time",
+   "code_family": "C",
+   "parents": [
+    "e2203e94a3a7c3db",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "5060b5eee7cb56db",
+   "code": "493c8b5a2ed2cd64",
+   "tier": "easy",
+   "klass": "date",
+   "code_family": "C",
+   "parents": [
+    "777588a9b908db8c"
+   ]
+  },
+  {
+   "cell": "f476abae1558c4b5",
+   "code": "0c8bea92f4e42a75",
+   "tier": "subtle",
+   "klass": "rest",
+   "code_family": "C",
+   "parents": [
+    "21a8c398a6509c10",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "62daa8a7d8c07542",
+   "code": "6ee0a6d512d27863",
+   "tier": "subtle",
+   "klass": "closed",
+   "code_family": "C",
+   "parents": [
+    "21a8c398a6509c10",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "8d5fe7527b974b48",
+   "code": "7083cf94ec143ec1",
+   "tier": "subtle",
+   "klass": "hours",
+   "code_family": "C",
+   "parents": [
+    "ce372390df7a6b3d"
+   ]
+  },
+  {
+   "cell": "174964b8e45df226",
+   "code": "428f4fd4f4f4f4c6",
+   "tier": "subtle",
+   "klass": "repeat",
+   "code_family": "C",
+   "parents": [
+    "e2203e94a3a7c3db",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "e2e21927269e39a5",
+   "code": "de37b7e3ac3b57ac",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "e2203e94a3a7c3db",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "da9a84c54f69548e",
+   "code": "c4446638f07231f5",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "05f54d13dc1cd3f6"
+   ]
+  },
+  {
+   "cell": "0939905ff5c46659",
+   "code": "a2b799b634929442",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "ce372390df7a6b3d"
+   ]
+  },
+  {
+   "cell": "529e02c023d9cf00",
+   "code": "bf4a5f55838137cb",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "75a755de0ae4cb70",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "237abca33aec6183",
+   "code": "7cc2ce11ecfe05ea",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "ce372390df7a6b3d"
+   ]
+  },
+  {
+   "cell": "be1859079006fd52",
+   "code": "5cb3036f4d2de229",
+   "tier": "subtle",
+   "klass": "stale",
+   "code_family": "L",
+   "parents": [
+    "1947db0151ab0b71",
+    "d73a65d22d44cafc"
+   ]
+  },
+  {
+   "cell": "9d7a7414ac612a13",
+   "code": "d81790a3540d1b63",
+   "tier": "subtle",
+   "klass": "text",
+   "code_family": "L",
+   "parents": [
+    "88dd4a31ac58a7d1",
+    "d73a65d22d44cafc"
+   ]
+  }
+ ],
+ "decoys": [
+  "2e0134b79452811c",
+  "1892343abfbbe7fa",
+  "ebf831ca77cc490d",
+  "081affbc88bffbc1",
+  "fea93658ed4f7909",
+  "7be98ed7d76513d1"
+ ]
+}

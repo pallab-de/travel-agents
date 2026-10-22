@@ -1,0 +1,62 @@
+{
+ "p01": {
+  "url": "https://maps.example-travel.test/route/p01",
+  "drive_minutes": 52,
+  "captured_at": "2030-05-04"
+ },
+ "p02": {
+  "url": "https://maps.example-travel.test/route/p02",
+  "drive_minutes": 61,
+  "captured_at": "2030-05-04"
+ },
+ "p03": {
+  "url": "https://maps.example-travel.test/route/p03",
+  "drive_minutes": 44,
+  "captured_at": "2030-05-04"
+ },
+ "p04": {
+  "url": "https://maps.example-travel.test/route/p04",
+  "drive_minutes": 78,
+  "captured_at": "2030-05-04"
+ },
+ "p05": {
+  "url": "https://maps.example-travel.test/route/p05",
+  "drive_minutes": 38,
+  "captured_at": "2030-05-04"
+ },
+ "p06": {
+  "url": "https://maps.example-travel.test/route/p06",
+  "drive_minutes": 57,
+  "captured_at": "2030-05-04"
+ },
+ "p07": {
+  "url": "https://maps.example-travel.test/route/p07",
+  "drive_minutes": 49,
+  "captured_at": "2030-05-04"
+ },
+ "p08": {
+  "url": "https://maps.example-travel.test/route/p08",
+  "drive_minutes": 70,
+  "captured_at": "2030-05-04"
+ },
+ "p09": {
+  "url": "https://maps.example-travel.test/route/p09",
+  "drive_minutes": 55,
+  "captured_at": "2030-05-04"
+ },
+ "p10": {
+  "url": "https://maps.example-travel.test/route/p10",
+  "drive_minutes": 63,
+  "captured_at": "2030-05-04"
+ },
+ "p11": {
+  "url": "https://maps.example-travel.test/route/p11",
+  "drive_minutes": 41,
+  "captured_at": "2030-05-04"
+ },
+ "p12": {
+  "url": "https://maps.example-travel.test/route/p12",
+  "drive_minutes": 66,
+  "captured_at": "2030-05-04"
+ }
+}
